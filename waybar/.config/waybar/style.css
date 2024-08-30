@@ -1,0 +1,97 @@
+@import "mocha.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: alpha(@base, 0.3);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+#workspaces {
+    margin-left: 3px;}
+
+#workspaces button {
+    min-width: 0;
+    padding: 6px 18px;
+    margin: 6px 3px;
+    border-radius: 4px;
+    background-color: alpha(@base, 0.6);
+    color: @text;
+    border: 1px solid @red;
+}
+
+#workspaces button.active, #workspaces button:hover {
+    color: @base;
+    background-color: @red;
+}
+
+#workspaces button.urgent {
+    background-color: @peach;
+    color: @base;
+}
+
+#memory,
+#custom-power,
+#battery,
+#backlight,
+#pulseaudio,
+#cpu,
+#network,
+#clock,
+#power-profiles-daemon,
+#custom-music,
+#tray {
+    border-radius: 4px;
+    margin: 6px 3px;
+    padding: 0px 12px;
+    background-color: alpha(@base, 0.6);
+    color: @text;
+    border: 1px solid @red;
+}
+
+#battery.warning {
+    background-color: @peach;
+    color: @base;
+}
+
+#battery.critical {
+    background-color: @red;
+    color: @base;    
+}
+
+#network {
+    padding-right: 17px;
+}
+
+#custom-power {
+    margin-right: 6px;
+    padding-right: 14px;
+}
+
+#power-profiles-daemon {
+    padding-left: 9px;
+    padding-right: 18px;
+}
+
+#backlight {
+    padding-right: 14px;
+}
+
+tooltip label {
+    border-radius: 10px;
+    padding: 15px;
+    background-color: alpha(@base, 0.6);
+    border: 2px solid @red;
+}
+
+tooltip {
+    padding: 0px;
+    background-color: transparent;
+}

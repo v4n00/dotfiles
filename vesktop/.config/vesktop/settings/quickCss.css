@@ -1,0 +1,14 @@
+[data-list-item-id*="__nitro"],
+[data-list-item-id*="__shop"],
+[aria-label="Send a gift"],
+
+/* help button */
+[href="https://support.discord.com"],
+
+/* new server and discover */
+.scroller_fea3ef > .listItem_c96c45:nth-last-child(4),
+.scroller_fea3ef > .tutorialContainer_c96c45
+{display: none;}
+
+/* hide shit statuses in vc */
+[class*='iconGroup'] > *:not([aria-label="Server Deafened"], [aria-label="Muted by you"], [class*='liveIcon'], [aria-label="Server Muted"], [aria-label="Deafened"], [aria-label="Muted"], [aria-label="Video"]) {display: none;}
