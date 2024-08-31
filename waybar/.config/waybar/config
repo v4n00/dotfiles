@@ -7,6 +7,7 @@
     ],
     "modules-center": [
         "clock",
+	"bluetooth",
 	"custom/music",
     ],
     "modules-right": [
@@ -29,16 +30,16 @@
 	"on-scroll-down" : "playerctl --player=spotify previous",
         "max-length": 50
     },
-    "power-profiles-daemon": {
-	"format": "{icon}",
-	"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-	"tooltip": true,
-	"format-icons": {
-	    "default": " ",
-            "performance": " ",
-            "balanced": "",
-            "power-saver": ""
-        }
+    "bluetooth": {
+	"format": "",
+	"format-disabled": "",
+	"format-off": "",
+	"format-on": "󰂱",
+	"format-connected": "",
+	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
     },
     "hyprland/workspaces": {
         "on-click": "activate",
@@ -93,6 +94,7 @@
         "format": "{icon}",
         "tooltip-format": "Volume: {volume}%",
         "format-muted": "󰝟",
+	"format-bluetooth": "󰂰",
         "format-icons": {
             "default": ["󰖀","󰕾"]
         },
@@ -148,7 +150,12 @@
     },
     "cpu": {
 	"interval": 10,
-        "format": "{}% ",
+        "format": "{load}% ",
+	"max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": "{}% ",
 	"max-length": 10
     },
     "custom/power": {

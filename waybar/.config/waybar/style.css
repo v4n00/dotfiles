@@ -43,9 +43,10 @@ window#waybar {
 #backlight,
 #pulseaudio,
 #cpu,
+#memory,
 #network,
 #clock,
-#power-profiles-daemon,
+#bluetooth,
 #custom-music,
 #tray {
     border-radius: 4px;
@@ -75,13 +76,16 @@ window#waybar {
     padding-right: 14px;
 }
 
-#power-profiles-daemon {
-    padding-left: 9px;
-    padding-right: 18px;
-}
-
 #backlight {
     padding-right: 14px;
+}
+
+#cpu {
+    padding-right: 16px;
+}
+
+#memory {
+    padding-right: 18px;
 }
 
 tooltip label {
