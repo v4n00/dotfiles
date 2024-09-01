@@ -1,2 +1,2 @@
 #!/bin/bash
-cliphist list | wofi --dmenu | cliphist decode | wl-copy
+cliphist list | tofi "$@" | cliphist decode | wl-copy

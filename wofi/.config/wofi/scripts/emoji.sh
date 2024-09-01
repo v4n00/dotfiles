@@ -1,8 +1,7 @@
 #!/bin/bash
-set -euo pipefail
-
-EMOJI="$(sed '1,/^### DATA ###$/d' $0 | wofi -p "emoji" --show dmenu -i | cut -d ' ' -f 1 | tr -d '\n')"
-wtype "$EMOJI"; wl-copy "$EMOJI"
+emoji=$(sed '1,/^### DATA ###$/d' $0 | tofi "$@" | cut -d ' ' -f 1 | tr -d '\n')
+echo -n $emoji | wtype -
+echo -n $emoji | wl-copy
 exit
 ### DATA ###
 😀 grinning face face smile happy joy :D grin

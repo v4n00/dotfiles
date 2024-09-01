@@ -9,5 +9,6 @@
         "en"
     ],
     "disableSmoothScroll": false,
-    "enableMenu": false
+    "enableMenu": false,
+    "splashTheming": false
 }
