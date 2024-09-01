@@ -1,0 +1,15 @@
+text-color = #cdd6f4
+prompt-color = #f38ba8
+selection-color = #f38ba8
+background-color = #1e1e2e
+border-color = #f38ba8
+
+outline-width = 0
+border-width = 2
+corner-radius = 10
+
+font = "/usr/share/fonts/TTF/JetBrainsMonoNLNerdFontMono-Medium.ttf, /usr/share/fonts/twemoji-color-font/TwitterColorEmoji-SVGinOT.ttf"
+font-size = 16
+width = 40%
+height = 40%
+
