@@ -5,26 +5,11 @@
     border-radius: 0;
     min-height: 0;
     font-family: JetBrainsMono Nerd Font;
-    font-size: 14px;
+    font-size: medium;
 }
 
 window#waybar {
     background-color: alpha(@base, 0.3);
-    transition-property: background-color;
-    transition-duration: 0.5s;
-}
-
-#workspaces {
-    margin-left: 3px;}
-
-#workspaces button {
-    min-width: 0;
-    padding: 6px 18px;
-    margin: 6px 3px;
-    border-radius: 4px;
-    background-color: alpha(@base, 0.6);
-    color: @text;
-    border: 1px solid @red;
 }
 
 #workspaces button.active, #workspaces button:hover {
@@ -37,26 +22,6 @@ window#waybar {
     color: @base;
 }
 
-#memory,
-#custom-power,
-#battery,
-#backlight,
-#pulseaudio,
-#cpu,
-#memory,
-#network,
-#clock,
-#bluetooth,
-#custom-music,
-#tray {
-    border-radius: 4px;
-    margin: 6px 3px;
-    padding: 0px 12px;
-    background-color: alpha(@base, 0.6);
-    color: @text;
-    border: 1px solid @red;
-}
-
 #battery.warning {
     background-color: @peach;
     color: @base;
@@ -67,35 +32,35 @@ window#waybar {
     color: @base;    
 }
 
-#network {
-    padding-right: 17px;
-}
-
-#custom-power {
-    margin-right: 6px;
-    padding-right: 14px;
-}
-
-#backlight {
-    padding-right: 14px;
-}
-
-#cpu {
-    padding-right: 16px;
-}
-
-#memory {
-    padding-right: 18px;
-}
-
-tooltip label {
-    border-radius: 10px;
-    padding: 15px;
+tooltip label,
+#workspaces button,
+#custom-power,
+#custom-lock,
+#custom-reboot,
+#custom-logout,
+#battery,
+#backlight,
+#pulseaudio,
+#memory,
+#network,
+#clock,
+#bluetooth,
+#custom-music,
+#tray {
+    border-radius: 0.5rem;
+    margin: 0.5rem 0.25rem;
+    padding: 0.4rem 1rem;
     background-color: alpha(@base, 0.6);
-    border: 2px solid @red;
+    color: @text;
+    border: 0.15rem solid @red;
 }
 
-tooltip {
-    padding: 0px;
-    background-color: transparent;
-}
+#network {padding-right: 1.1rem;}
+#custom-power {padding-right: 1.2rem;}
+#custom-logout {margin-left: 1rem;}
+#workspaces button {padding-left: 1.2rem;}
+tooltip label {margin: 0; margin-top: 1rem;}
+tooltip {background-color: transparent;}
+
+#workspaces {margin-left: 0.25rem;}
+#custom-power {margin-right: 0.25rem;}

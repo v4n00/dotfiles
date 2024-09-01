@@ -17,7 +17,7 @@
         "pulseaudio",
 	"power-profiles-daemon",
         "battery",
-        "custom/power"
+	"group/group-power",
     ],
     "custom/music": {
         "format": "  {}",
@@ -146,21 +146,45 @@
     },
     "tray": {
 	"icon-size": 20,
-        "spacing": 10
-    },
-    "cpu": {
-	"interval": 10,
-        "format": "{load}% ",
-	"max-length": 10
-    },
-    "memory": {
-        "interval": 30,
-        "format": "{}% ",
-	"max-length": 10
+        "spacing": 10,
     },
     "custom/power": {
         "format": "⏻",
         "tooltip": false,
         "on-click": "~/.config/hypr/scripts/wlogout.sh",
-    }
+    },
+    "group/group-power": {
+        "orientation": "inherit",
+	"drawer": {
+	    "transition-duration": 500,
+	    "children-class": "drawer",
+            "transition-left-to-right": false,
+        },
+	"modules": [
+	    "custom/power",
+            "custom/logout",
+            "custom/lock",
+            "custom/reboot",
+	]
+    },
+    "custom/logout": {
+        "format": "󰗼",
+	"tooltip": false,
+        "on-click": "~/.config/hypr/scripts/logout.sh"
+    },
+    "custom/lock": {
+	"format": "󰍁",
+        "tooltip": false,
+	"on-click": "loginctl lock-session"
+    },
+    "custom/reboot": {
+	"format": "󰜉",
+        "tooltip": false,
+	"on-click": "systemctl reboot"
+    },
+    "custom/power": {
+	"format": "",
+        "tooltip": false,
+	"on-click": "systemctl poweroff"
+    },
 }
