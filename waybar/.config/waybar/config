@@ -170,7 +170,7 @@
     "custom/logout": {
         "format": "󰗼",
 	"tooltip": false,
-        "on-click": "~/.config/hypr/scripts/logout.sh"
+        "on-click": "hyprctl dispatch exit"
     },
     "custom/lock": {
 	"format": "󰍁",
