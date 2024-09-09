@@ -17,6 +17,16 @@ window#waybar {
     background-color: @red;
 }
 
+#workspaces button.special.urgent.active {
+    color: @base;
+    background-color: @red;
+}
+
+#workspaces button.special.urgent {
+    color: @text;
+    background-color: @base;
+}
+
 #workspaces button.urgent {
     background-color: @peach;
     color: @base;
@@ -60,6 +70,7 @@ tooltip label,
 #custom-power {padding-right: 1.2rem;}
 #custom-logout {margin-left: 1rem;}
 #workspaces button {padding-left: 1.2rem;}
+#workspaces button.special {padding-left: 0.8rem;}
 tooltip label {margin: 0; margin-top: 1rem; background-color: @base}
 tooltip {background-color: transparent;}
 

@@ -10,5 +10,6 @@
     ],
     "disableSmoothScroll": false,
     "enableMenu": false,
-    "splashTheming": false
+    "splashTheming": false,
+    "hardwareAcceleration": true
 }

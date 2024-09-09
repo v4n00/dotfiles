@@ -44,8 +44,10 @@
     "hyprland/workspaces": {
         "on-click": "activate",
         "format": "{icon}",
+	"show-special": true,
         "format-icons": {
             "default": "",
+	    "spoticord": "",
             "1": "1",
             "2": "2",
             "3": "3",
