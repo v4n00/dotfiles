@@ -1,0 +1,4 @@
+colorscheme catppuccin
+fset no-instrumental=!(filename="*instrumental*"|filename="*karaoke*"|filename="*off vocal*")
+factivate no-instrumental
+

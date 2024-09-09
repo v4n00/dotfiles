@@ -25,9 +25,9 @@
         "interval": 5,
         "tooltip": false,
         "exec": "sleep 0.1 && ~/.config/waybar/scripts/play-pause.sh",
-        "on-click": "playerctl --player=spotify play-pause",
-	"on-scroll-up" : "playerctl --player=spotify next",
-	"on-scroll-down" : "playerctl --player=spotify previous",
+        "on-click": "playerctl --player=cmus play-pause",
+	"on-scroll-up" : "playerctl --player=cmus next",
+	"on-scroll-down" : "playerctl --player=cmus previous",
         "max-length": 50
     },
     "bluetooth": {
@@ -47,7 +47,7 @@
 	"show-special": true,
         "format-icons": {
             "default": "",
-	    "spoticord": "",
+	    "md": "",
             "1": "1",
             "2": "2",
             "3": "3",

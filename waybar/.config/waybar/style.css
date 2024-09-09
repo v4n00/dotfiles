@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background-color: alpha(@base, 0.3);
+    background-color: alpha(@base, 0.7);
 }
 
 #workspaces button.active, #workspaces button:hover {
@@ -24,7 +24,7 @@ window#waybar {
 
 #workspaces button.special.urgent {
     color: @text;
-    background-color: @base;
+    background-color: alpha(@base, 0.7);
 }
 
 #workspaces button.urgent {
@@ -60,7 +60,7 @@ tooltip label,
     border-radius: 0.5rem;
     margin: 0.5rem 0.25rem;
     padding: 0.4rem 1rem;
-    background-color: alpha(@base, 0.6);
+    background-color: alpha(@base, 0.7);
     color: @text;
     border: 0.15rem solid @red;
 }
