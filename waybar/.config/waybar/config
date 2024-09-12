@@ -166,6 +166,7 @@
 	    "custom/power",
             "custom/logout",
             "custom/lock",
+	    "custom/sleep",
             "custom/reboot",
 	]
     },
@@ -173,6 +174,11 @@
         "format": "󰗼",
 	"tooltip": false,
         "on-click": "hyprctl dispatch exit"
+    },
+    "custom/sleep": {
+	"format": "󰤄",
+	"tooltip": false,
+	"on-click": "systemctl suspend",
     },
     "custom/lock": {
 	"format": "󰍁",

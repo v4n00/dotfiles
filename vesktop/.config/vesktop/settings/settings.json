@@ -255,7 +255,8 @@
             "ignoreChannels": "",
             "ignoreGuilds": "",
             "logEdits": true,
-            "logDeletes": true
+            "logDeletes": true,
+            "inlineEdits": true
         },
         "MessageTags": {
             "enabled": false
@@ -574,6 +575,10 @@
         },
         "VolumeBooster": {
             "enabled": false
+        },
+        "AccountPanelServerProfile": {
+            "enabled": false,
+            "prioritizeServerProfile": false
         }
     },
     "notifications": {
@@ -586,6 +591,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1725883090109
+        "settingsSyncVersion": 1726163957026
     }
 }

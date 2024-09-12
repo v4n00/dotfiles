@@ -1,2 +1,2 @@
 #!/bin/bash
-grimblast --notify --freeze --cursor copysave area $HOME"/Screenshots/"$(date +'%F-%T.png')
+grimblast --notify --freeze --cursor copysave area $HOME"/Pictures/Screenshots/"$(date +'%F-%T.png')

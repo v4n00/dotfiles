@@ -58,7 +58,7 @@
 	/* status dot colors */
 	--online-dot: var(--green); /* color of online dot. */
 	--dnd-dot: var(--red); /* color of do not disturb dot. */
-	--idle-dot: var(--yellow); /* color of idle dot. */
+	--idle-dot: var(--peach); /* color of idle dot. */
 	--streaming-dot: var(--purple); /* color of streaming dot. */
 
 	/* mention/ping and message colors */
@@ -73,6 +73,7 @@
 	--red: #f38ba8;
 	--red-1: #cc748d;
 	--red-2: #b2657b;
+	--peach: #fab387;
 	--pink: #f38ba8;
 	--pink-1: #d16c89;
 	--pink-2: #af4e6c;

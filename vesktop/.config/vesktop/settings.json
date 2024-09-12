@@ -1,7 +1,7 @@
 {
     "discordBranch": "stable",
-    "minimizeToTray": true,
-    "arRPC": true,
+    "minimizeToTray": false,
+    "arRPC": false,
     "splashColor": "rgb(205, 214, 244)",
     "splashBackground": "rgb(30, 30, 46)",
     "spellCheckLanguages": [
@@ -12,5 +12,6 @@
     "enableMenu": false,
     "splashTheming": false,
     "hardwareAcceleration": true,
-    "tray": false
+    "tray": false,
+    "appBadge": false
 }
