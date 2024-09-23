@@ -48,6 +48,7 @@
         "format-icons": {
             "default": "",
 	    "md": "",
+	    "codeblocks": "󰙲 ",
             "1": "1",
             "2": "2",
             "3": "3",
@@ -61,7 +62,7 @@
     },
     "clock": {
         "format": "  {:%H:%M}",
-	"format-alt": "󰃭 {:%A | %D | (%R)}",
+	"format-alt": "󰃭 {:%A | %d/%m/%Y | (%R)}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode"          : "year",

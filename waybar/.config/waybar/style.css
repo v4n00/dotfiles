@@ -72,8 +72,9 @@ tooltip label,
 #custom-logout {margin-left: 1rem;}
 #workspaces button {padding-left: 1.2rem;}
 #workspaces button.special {padding-left: 0.8rem;}
-tooltip label {margin: 0; margin-top: 1rem; background-color: @base}
-tooltip {background-color: transparent;}
+tooltip label {margin: 0; margin-top: 0.5rem; background-color: @base}
+tooltip * {background-color: transparent;}
+tooltip.background {background-color: transparent;}
 
 #workspaces {margin-left: 0.25rem;}
 #custom-power {margin-right: 0.25rem;}

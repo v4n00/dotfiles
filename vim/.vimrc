@@ -1,3 +1,6 @@
 set shiftwidth=4 smarttab
-set number
-set relativenumber
+set number relativenumber
+set showmatch
+
+syntax enable
+
