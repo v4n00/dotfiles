@@ -6,11 +6,11 @@ max_volume=100
 notification_timeout=1000
 
 function get_volume {
-    pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]{1,3}(?=%)' | head -1
+    wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}'
 }
 
 function get_mute {
-    pactl get-sink-mute @DEFAULT_SINK@ | grep -Po '(?<=Mute: )(yes|no)'
+    wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{if ($3 == "[MUTED]") print "yes"; else print "no"}'
 }
 
 function get_brightness {
@@ -72,40 +72,38 @@ function get_brightness_icon {
 }
 
 function show_volume_notif {
-    volume=$(get_mute)
     get_volume_icon
     notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume "$volume_icon  $volume%"
 }
 
 function show_brightness_notif {
-    brightness=$(get_brightness)
     get_brightness_icon
     notify-send -t $notification_timeout -h string:x-dunst-stack-tag:brightness_notif -h int:value:$brightness "$brightness_icon  $brightness%"
 }
 
 case $1 in
     volume_up)
-    pactl set-sink-mute @DEFAULT_SINK@ 0
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
     volume=$(get_volume)
     if [ $(( "$volume" + "$volume_step" )) -gt $max_volume ]; then
-        pactl set-sink-volume @DEFAULT_SINK@ $max_volume%
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ $max_volume%
     else
-        pactl set-sink-volume @DEFAULT_SINK@ +$volume_step%
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ $volume_step%+
     fi
     show_volume_notif
     ;;
 
     volume_down)
-    pactl set-sink-volume @DEFAULT_SINK@ -$volume_step%
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ $volume_step%-
     volume=$(get_volume)
     if [ "$volume" -le 0 ]; then
-	pactl set-sink-mute @DEFAULT_SINK@ 1
+	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     fi
     show_volume_notif
     ;;
 
     volume_mute)
-    pactl set-sink-mute @DEFAULT_SINK@ toggle
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     show_volume_notif
     ;;
 
