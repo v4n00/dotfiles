@@ -1,9 +1,12 @@
 #!/bin/bash
 
 volume_step=2
-brightness_step=12
+brightness_step=4
 max_volume=100
+
 notification_timeout=1000
+brightness_modifier=4
+_brightness_step=$((brightness_step * brightness_modifier))
 
 function get_volume {
     wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}'
@@ -14,7 +17,7 @@ function get_mute {
 }
 
 function get_brightness {
-    echo $(($(brightnessctl g) / 4))
+    echo $(($(brightnessctl g) / brightness_modifier))
 }
 
 function get_volume_icon {
@@ -108,16 +111,15 @@ case $1 in
     ;;
 
     brightness_up)
-    brightnessctl set $brightness_step+
+    brightnessctl set $_brightness_step+
     show_brightness_notif
     ;;
 
     brightness_down)
-    brightness=$(get_brightness)
-    if [ $((brightness * 4 - brightness_step)) -le $brightness_step ]; then
-	brightnessctl set $min_brightness 
+    if [ $(($(brightnessctl g) - _brightness_step)) -le $_brightness_step ]; then
+	brightnessctl set $_brightness_step 
     else
-	brightnessctl set $brightness_step-
+	brightnessctl set $_brightness_step-
     fi
     show_brightness_notif
     ;;
