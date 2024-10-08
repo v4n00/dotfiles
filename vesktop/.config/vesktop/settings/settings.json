@@ -170,7 +170,7 @@
             "enabled": false
         },
         "FavoriteGifSearch": {
-            "enabled": true
+            "enabled": false
         },
         "FixCodeblockGap": {
             "enabled": false
@@ -182,7 +182,7 @@
             "enabled": true
         },
         "ForceOwnerCrown": {
-            "enabled": true
+            "enabled": false
         },
         "FriendInvites": {
             "enabled": false
@@ -517,7 +517,7 @@
             "enabled": false
         },
         "ViewIcons": {
-            "enabled": false
+            "enabled": true
         },
         "ViewRaw": {
             "enabled": false
@@ -591,6 +591,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1726905210092
+        "settingsSyncVersion": 1728234770715
     }
 }

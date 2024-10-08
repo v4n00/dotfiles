@@ -7,6 +7,7 @@ max_volume=100
 notification_timeout=1000
 brightness_modifier=4
 _brightness_step=$((brightness_step * brightness_modifier))
+assets=~/.config/hypr/scripts/assets
 
 function get_volume {
     wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}'
@@ -24,64 +25,28 @@ function get_volume_icon {
     volume=$(get_volume)
     mute=$(get_mute)
     if [ "$volume" -eq 0 ] || [ "$mute" == "yes" ]; then
-        volume_icon=""
+        volume_icon=$assets/volume-mute.svg
     elif [ "$volume" -lt 50 ]; then
-        volume_icon=""
+        volume_icon=$assets/volume-low.svg
     else
-        volume_icon=""
+        volume_icon=$assets/volume-high.svg
     fi
 }
 
 function get_brightness_icon {
     brightness=$(get_brightness)
     step=$((brightness / 12))
-    case $step in
-	0) 
-        brightness_icon=""
-	;;
-
-        1)
-        brightness_icon=""
-        ;;
-
-        2)
-        brightness_icon=""
-        ;;
-
-        3)
-        brightness_icon=""
-        ;;
-
-        4)
-        brightness_icon=""
-        ;;
-
-        5)
-        brightness_icon=""
-        ;;
-
-        6)
-        brightness_icon=""
-        ;;
-    
-        7)
-        brightness_icon=""
-        ;;
-    
-        8)
-        brightness_icon=""
-        ;;
-    esac    
+    brightness_icon=$assets/brightness-$step.svg
 }
 
 function show_volume_notif {
     get_volume_icon
-    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume "$volume_icon  $volume%"
+    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume -i "$volume_icon" "Volume" "Volume currently at $volume%"
 }
 
 function show_brightness_notif {
     get_brightness_icon
-    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:brightness_notif -h int:value:$brightness "$brightness_icon  $brightness%"
+    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:brightness_notif -h int:value:$brightness -i "$brightness_icon" "Brightness" "Brightness currently at $brightness%"
 }
 
 case $1 in
