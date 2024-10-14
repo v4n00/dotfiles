@@ -15,9 +15,7 @@
         "network",
 	"backlight",
         "pulseaudio",
-	"power-profiles-daemon",
         "battery",
-	"group/group-power",
     ],
     "custom/music": {
         "format": "  {}",
@@ -32,8 +30,6 @@
     },
     "bluetooth": {
 	"format": "",
-	"format-disabled": "",
-	"format-off": "",
 	"format-on": "󰂱",
 	"format-connected": "",
 	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
@@ -150,50 +146,5 @@
     "tray": {
 	"icon-size": 20,
         "spacing": 10,
-    },
-    "custom/power": {
-        "format": "⏻",
-        "tooltip": false,
-        "on-click": "~/.config/hypr/scripts/wlogout.sh",
-    },
-    "group/group-power": {
-        "orientation": "inherit",
-	"drawer": {
-	    "transition-duration": 500,
-	    "children-class": "drawer",
-            "transition-left-to-right": false,
-        },
-	"modules": [
-	    "custom/power",
-            "custom/logout",
-            "custom/lock",
-	    "custom/sleep",
-            "custom/reboot",
-	]
-    },
-    "custom/logout": {
-        "format": "󰗼",
-	"tooltip": false,
-        "on-click": "hyprctl dispatch exit"
-    },
-    "custom/sleep": {
-	"format": "󰤄",
-	"tooltip": false,
-	"on-click": "systemctl suspend",
-    },
-    "custom/lock": {
-	"format": "󰍁",
-        "tooltip": false,
-	"on-click": "loginctl lock-session"
-    },
-    "custom/reboot": {
-	"format": "󰜉",
-        "tooltip": false,
-	"on-click": "systemctl reboot"
-    },
-    "custom/power": {
-	"format": "",
-        "tooltip": false,
-	"on-click": "systemctl poweroff"
     },
 }
