@@ -28,6 +28,13 @@ source $ZPLUGINDIR/git/git.plugin.zsh
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
 
+# gpg
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
 # options
 setopt auto_cd
 setopt auto_pushd
