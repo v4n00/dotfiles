@@ -51,8 +51,7 @@ tooltip label,
 #custom-sleep,
 #battery,
 #backlight,
-#pulseaudio,
-#memory,
+#wireplumber,
 #network,
 #clock,
 #bluetooth,
@@ -68,6 +67,7 @@ tooltip label,
 
 #custom-music {font-size: 0.9rem;}
 #network {padding-right: 1.1rem;}
+#wireplumber {padding-left: 0.9rem;}
 #custom-power {padding-right: 1.2rem;}
 #custom-logout {margin-left: 1rem;}
 #workspaces button {padding-left: 1.2rem;}
