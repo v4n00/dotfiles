@@ -14,7 +14,7 @@
         "tray",
         "network",
 	"backlight",
-        "pulseaudio",
+        "wireplumber",
         "battery",
     ],
     "custom/music": {
@@ -89,7 +89,7 @@
 	"tooltip-format-disconnected": "Disconnected",
 	"interval": 5,
     },
-    "pulseaudio": {
+    "wireplumber": {
         "format": "{icon}",
         "tooltip-format": "Volume: {volume}%",
         "format-muted": "󰝟",
@@ -97,7 +97,6 @@
         "format-icons": {
             "default": ["󰖀","󰕾"]
         },
-        "on-click": "pavucontrol",
         "scroll-step": 2
     },
     "battery": {
