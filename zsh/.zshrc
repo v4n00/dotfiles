@@ -60,7 +60,6 @@ alias hconfs='cd ~/.config/hypr/scripts'
 alias kconf='vim ~/.config/kitty/kitty.conf'
 alias wconf='cd ~/.config/waybar'
 alias zshrc='vim ~/.zshrc'
-alias nmcheat='cat ~/Documents/nmcheat.md'
 
 # aliases
 alias ls='ls --color'
@@ -87,6 +86,8 @@ alias ll='ls -lh'
 alias la='ls -lAh'
 alias untar='tar -xvzf'
 alias v='$EDITOR'
+alias bon="systemctl start bluetooth.service"
+alias boff="systemctl stop bluetooth.service"
 
 # history
 HISTSIZE=10000

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 volume_step=2
-brightness_step=4
+brightness_step=2
 max_volume=100
 
 notification_timeout=1000
