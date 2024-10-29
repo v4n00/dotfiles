@@ -1,4 +1,3 @@
-### 'Catppuccin' theme for CMus (for 255 color terms)
 set color_cmdline_bg=default
 # Text Color
 set color_cmdline_fg=white
@@ -17,7 +16,7 @@ set color_statusline_fg=white
 # Titleline background
 set color_titleline_bg=red
 # Titleline foreground
-set color_titleline_fg=16
+set color_titleline_fg=white
 
 # Terminal default as background
 set color_win_bg=default
@@ -26,7 +25,7 @@ set color_win_bg=default
 set color_win_cur=red
 # Indicator over currently playing song
 set color_win_cur_sel_bg=red
-set color_win_cur_sel_fg=16
+set color_win_cur_sel_fg=white
 
 # Browser Directory Colors
 set color_win_dir=white
@@ -35,15 +34,15 @@ set color_win_dir=white
 set color_win_fg=white
 # Selected inactive Directory of currently playing Album/Song
 set color_win_inactive_cur_sel_bg=white
-set color_win_inactive_cur_sel_fg=16
+set color_win_inactive_cur_sel_fg=black
 
 # Selected inactive Directory
 set color_win_inactive_sel_bg=white
-set color_win_inactive_sel_fg=16
+set color_win_inactive_sel_fg=black
 
 # Indicator color
 set color_win_sel_bg=red
-set color_win_sel_fg=16
+set color_win_sel_fg=white
 
 # Artist/Album / Track Heading
 set color_win_title_bg=default

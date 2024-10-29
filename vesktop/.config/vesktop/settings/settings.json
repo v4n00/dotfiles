@@ -4,7 +4,8 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "mocha.theme.css"
+        "mocha.theme.css",
+        "system24.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -597,6 +598,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1729674892211
+        "settingsSyncVersion": 1730232658079
     }
 }

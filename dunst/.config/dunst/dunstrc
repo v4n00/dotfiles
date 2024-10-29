@@ -1,4 +1,8 @@
 [global]
+    frame_color = "#cc241d"
+    highlight = "#cc241d"
+    background = "#1d2021"
+    foreground = "#ebdbb2"
     monitor = 0
     follow = none
     width = 300
@@ -22,8 +26,6 @@
     progress_bar_corner_radius = 10
     separator_height = 2
     frame_width = 2
-    frame_color = "#f38ba8"
-    highlight = "#f38ba8"
     separator_color = "frame" 
     corner_radius = 8 
     transparency = 0 
@@ -53,18 +55,3 @@
     mouse_middle_click = "close_all" 
     mouse_right_click = "close_current" 
 
-[experimental]
-    per_monitor_dpi = false
-
-[urgency_low]
-    background = "#1e1e2e"
-    foreground = "#cdd6f4"
-
-[urgency_normal]
-    background = "#1e1e2e"
-    foreground = "#cdd6f4"
-
-[urgency_critical]
-    background = "#1e1e2e"
-    foreground = "#cdd6f4"
-    frame_color = "#fab387"

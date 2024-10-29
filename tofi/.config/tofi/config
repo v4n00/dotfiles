@@ -1,8 +1,8 @@
-text-color = #cdd6f4
-prompt-color = #f38ba8
-selection-color = #f38ba8
-background-color = #1e1e2e
-border-color = #f38ba8
+text-color = #ebdbb2
+prompt-color = #cc241d
+selection-color = #cc241d
+background-color = #1d2021
+border-color = #cc241d
 
 outline-width = 0
 border-width = 2

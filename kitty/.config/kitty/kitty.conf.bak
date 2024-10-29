@@ -6,7 +6,7 @@ bold_italic_font auto
 # END_KITTY_FONTS
 
 # BEGIN_KITTY_THEME
-# Gruvbox Dark Hard
+# Gruvbox Dark
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -17,10 +17,6 @@ tab_bar_edge bottom
 tab_bar_style powerline
 tab_powerline_style slanted
 tab_title_template {title}{' :{}: '.format(num_windows) if num_windows > 1 else ''}
-active_tab_foreground   black
-active_tab_background   red3
-inactive_tab_foreground black
-inactive_tab_background red4
 
 map Alt+F2 kitten kitty_grab/grab.py
 map kitty_mod+Left   no_op
