@@ -13,12 +13,12 @@ window#waybar {
 }
 
 #workspaces button.active, #workspaces button:hover {
-    color: @bg;
+    color: @fg;
     background-color: @red;
 }
 
 #workspaces button.special.urgent.active {
-    color: @bg;
+    color: @fg;
     background-color: @red;
 }
 
