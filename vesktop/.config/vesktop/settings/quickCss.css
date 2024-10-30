@@ -9,6 +9,9 @@
 .scroller_fea3ef > .tutorialContainer_c96c45,
 .footer_aa1bff,
 
+/* avatar decorations */
+[class^="avatarDecoration"],
+
 /* hide activity button */
 [aria-label="Start an Activity"]
 {display: none;}
