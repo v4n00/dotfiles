@@ -28,6 +28,23 @@ source $ZPLUGINDIR/git/git.plugin.zsh
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
 
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+# pnpm
+export PNPM_HOME="/home/v4n/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # gpg
 unset SSH_AGENT_PID
 if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
@@ -57,9 +74,9 @@ bindkey '^f' autosuggest-accept
 alias hconf='cd ~/.config/hypr'
 alias hconff='cd ~/.config/hypr/hyprland'
 alias hconfs='cd ~/.config/hypr/scripts'
-alias kconf='vim ~/.config/kitty/kitty.conf'
+alias kconf='$EDITOR ~/.config/kitty/kitty.conf'
 alias wconf='cd ~/.config/waybar'
-alias zshrc='vim ~/.zshrc'
+alias zshrc='$EDITOR ~/.zshrc'
 
 # aliases
 alias ls='ls --color'
@@ -106,3 +123,4 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu select
+
