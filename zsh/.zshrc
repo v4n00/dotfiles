@@ -27,7 +27,6 @@ source $ZPLUGINDIR/git/git.plugin.zsh
 # services
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
-pidof ssh-agent @> /dev/null || eval "$(ssh-agent -s -a $XDG_RUNTIME_DIR/ssh-agent.socket)" > /dev/null
 
 # yazi
 function y() {
