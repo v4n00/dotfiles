@@ -27,6 +27,7 @@ source $ZPLUGINDIR/git/git.plugin.zsh
 # services
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
+pidof ssh-agent @> /dev/null || eval "$(ssh-agent -s -a $XDG_RUNTIME_DIR/ssh-agent.socket)" > /dev/null
 
 # yazi
 function y() {
@@ -45,14 +46,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# gpg
-unset SSH_AGENT_PID
-if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-fi
-export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
-
 # options
 setopt auto_cd
 setopt auto_pushd
@@ -60,7 +53,7 @@ setopt pushd_ignore_dups
 setopt pushdminus
 
 # env
-export EDITOR='vim'
+export EDITOR='nvim'
 export PAGES='less'
 export BROWSER='firefox'
 export TERMCMD='kitty' 
