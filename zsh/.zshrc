@@ -27,7 +27,7 @@ source $ZPLUGINDIR/git/git.plugin.zsh
 # services
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
-eval "$(keychain --eval --noask --quiet id_ed25519)"
+eval "$(keychain --eval --quiet id_ed25519)"
 
 # yazi
 function y() {
