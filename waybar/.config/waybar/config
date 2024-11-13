@@ -82,10 +82,10 @@
     "network": {
         "format-wifi" : "{icon}",
         "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-        "format-ethernet": "󰀂",
-        "format-disconnected" : "󰖪",
+        "format-ethernet": "󰈀",
+        "format-disconnected" : "󱘖",
 	"tooltip-format-wifi": "{icon}  {essid}\n󰩟  {ipaddr}",
-        "tooltip-format-ethernet": "󰀂  {ifname}\n󰩠  {ipaddr}",
+        "tooltip-format-ethernet": "󰈀  {ifname}\n󰩠  {ipaddr}",
 	"tooltip-format-disconnected": "Disconnected",
 	"interval": 5,
     },
