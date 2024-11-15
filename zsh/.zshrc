@@ -27,6 +27,7 @@ source $ZPLUGINDIR/git/git.plugin.zsh
 # services
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
+eval "$(keychain --eval --quiet id_ed25519)"
 
 # yazi
 function y() {
@@ -52,7 +53,7 @@ setopt pushd_ignore_dups
 setopt pushdminus
 
 # env
-export EDITOR='vim'
+export EDITOR='nvim'
 export PAGES='less'
 export BROWSER='firefox'
 export TERMCMD='kitty' 
@@ -116,5 +117,3 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu select
 
-# ssh
-eval "$(keychain --eval --quiet id_ed25519)"

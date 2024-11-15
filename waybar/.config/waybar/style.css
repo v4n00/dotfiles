@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background-color: alpha(@bg, 0.7);
+    background-color: @bg;
 }
 
 #workspaces button.active, #workspaces button:hover {
