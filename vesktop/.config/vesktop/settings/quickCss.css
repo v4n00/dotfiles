@@ -1,20 +1,151 @@
+/* nitro */
 [data-list-item-id*="__nitro"],
 [data-list-item-id*="__shop"],
 [aria-label="Send a gift"],
 
-/* help button */
+/* top bar right side */
 [href="https://support.discord.com"],
+[class^="recentsIcon"],
+[aria-label="Notification Settings"],
+[aria-label="Threads"],
+[class^="inviteToolbar"] [class^="divider"],
 
-/* new server and discover */
-.scroller_fea3ef > .tutorialContainer_c96c45,
-.footer_aa1bff,
+/* new server, discover */
+ul [class^="tutorialContainer_"]:not(:first-of-type),
+ul [class^="footer"],
+ul > div[class^="scroller"] > [class^="listItem"],
 
-/* avatar decorations */
+/* profiles */
 [class^="avatarDecoration"],
+[class^="profileEffects"],
+[aria-label="User Badges"],
+[aria-label^="Custom status:"],
+[class^="invisibleContainer"],
+[class^="mutuals"],
+[aria-label="Pronouns"],
+[class*="pronouns"] > [class^="dotSpacer"],
+[class^="usernameRow"] > [class^="nicknameIcons"],
+div[class^="scroller"] > section[class^="section"]:last-of-type,
 
 /* hide activity button */
-[aria-label="Start an Activity"]
-{display: none;}
+[aria-label="Start an Activity"],
+[class^="channelAppLauncher"],
+[class^="wrapper"] > [class^="buttonContainer"],
+[aria-label="Members"] > h3:first-of-type,
 
-/* hide statuses in vc */
-[class*='iconGroup'] > *:not([aria-label="Server Deafened"], [aria-label="Muted by you"], [class*='liveIcon'], [aria-label="Server Muted"], [aria-label="Deafened"], [aria-label="Muted"], [aria-label="Video"]) {display: none;}
+/* events */
+[aria-label="Channels"] > li > div[class^="containerDefault"],
+[aria-label="Channels"] > [class^="sectionDivider"],
+[aria-label="Channels"] > div[style="height: 12px;"],
+
+/* stickers */
+[class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(2),
+[id="sticker-picker-tab"]
+
+{ display: none; }
+
+/* disable nitro banner */
+foreignObject > div[class^="banner"]
+{ background-image: none !important; }
+
+/* -------------------- */
+
+/* small server bar */
+:root {
+    --icon-size: 36px;
+    --icon-gap: 10px;
+    --nav-height: 42px;
+    --nav-width: 236px;
+    --nav-gap: 14px;
+}
+
+/* push down sidebar */
+[class^="content"] > [class^="sidebar"] {
+    margin-top: calc(var(--nav-height) + var(--pad) + var(--nav-gap));
+}
+
+/* by removing sidebar, move every element to the left */
+[class^="container"] > div[class^="base"] {
+    margin: var(--pad);
+}
+
+/* navigation bar */
+[class^="container"] > nav {
+    position: absolute;
+    left: calc(var(--pad));
+    top: calc(var(--pad));
+    width: var(--nav-width);
+    height: var(--nav-height);
+    z-index: 1;
+    margin: 0;
+
+    /* current server indicator */
+    [class^="pill"] {
+        transform: rotate(90deg) translateX(345%) translateY(-45%);
+        height: calc(var(--icon-size) - 15%);
+    }
+
+    /* scale down ping size */
+    > ul [class^="lowerBadge"] {
+        transform: scale(90%) !important;
+    }
+
+    /* navigation container flexbox */
+    > ul > [class^="scroller"] {
+        display: flex;
+        padding: 0 var(--icon-gap);
+        gap: var(--icon-gap);
+        overflow: scroll hidden !important;
+
+        /* server scroller */
+        > [aria-label="Servers"] {
+            display: flex;
+            gap: var(--icon-gap);
+        }
+
+        /* normalize size - home button */
+        > [class^="tutorialContainer"] > [class^="listItem"] {
+            width: var(--icon-size);
+            height: var(--icon-size);
+
+            > [class^="listItem"] > [class^="wrapper"] {
+                width: var(--icon-size);
+                height: var(--icon-size);
+            }
+        }
+
+        /* normalize size - individual DM buttons */
+        > div[style^="opacity: 1;"] {
+            height: var(--icon-size) !important;
+            width: var(--icon-size) !important;
+
+            > [class^="listItem"] {
+                width: var(--icon-size);
+                height: var(--icon-size);
+
+                > [class^="listItemWrapper"] > [class^="wrapper"] {
+                    width: var(--icon-size);
+                    height: var(--icon-size);
+                }
+            }
+        }
+
+        /* normalize size - individual server buttons */
+        > [aria-label="Servers"] > [class^="listItem"] {
+            width: var(--icon-size);
+            height: var(--icon-size);
+
+            > div > div > [class^="wrapper"] {
+                width: var(--icon-size);
+                height: var(--icon-size);
+            }
+        }
+    }
+
+    /* scale server icons down */
+    svg {
+        height: var(--icon-size);
+        width: var(--icon-size);
+    }
+}
+

@@ -55,6 +55,7 @@ setopt pushdminus
 # env
 export EDITOR='nvim'
 export PAGES='less'
+export MANPAGER='nvim +Man!'
 export BROWSER='firefox'
 export TERMCMD='kitty' 
 
@@ -94,10 +95,7 @@ alias lsa='ls -lah'
 alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
-alias untar='tar -xvzf'
 alias v='$EDITOR'
-alias bon="systemctl start bluetooth.service"
-alias boff="systemctl stop bluetooth.service"
 
 # history
 HISTSIZE=10000

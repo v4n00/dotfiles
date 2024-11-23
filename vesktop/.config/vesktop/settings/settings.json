@@ -21,13 +21,13 @@
             "enabled": true
         },
         "MemberListDecoratorsAPI": {
-            "enabled": false
+            "enabled": true
         },
         "MessageAccessoriesAPI": {
             "enabled": true
         },
         "MessageDecorationsAPI": {
-            "enabled": false
+            "enabled": true
         },
         "MessageEventsAPI": {
             "enabled": true
@@ -48,7 +48,9 @@
             "enabled": false
         },
         "AlwaysTrust": {
-            "enabled": false
+            "enabled": false,
+            "domain": true,
+            "file": true
         },
         "AnonymiseFileNames": {
             "enabled": false
@@ -66,16 +68,26 @@
             "enabled": false
         },
         "BetterFolders": {
-            "enabled": false
+            "enabled": false,
+            "sidebar": true,
+            "sidebarAnim": true,
+            "closeAllFolders": false,
+            "closeAllHomeButton": false,
+            "closeOthers": false,
+            "forceOpen": false,
+            "keepIcons": false,
+            "showFolderIcon": 1
         },
         "BetterGifAltText": {
             "enabled": false
         },
         "BetterGifPicker": {
-            "enabled": false
+            "enabled": true
         },
         "BetterNotesBox": {
-            "enabled": false
+            "enabled": false,
+            "hide": true,
+            "noSpellCheck": false
         },
         "BetterRoleContext": {
             "enabled": false
@@ -84,13 +96,18 @@
             "enabled": false
         },
         "BetterSessions": {
-            "enabled": false
+            "enabled": false,
+            "backgroundCheck": false,
+            "checkInterval": 20
         },
         "BetterSettings": {
-            "enabled": false
+            "enabled": true,
+            "disableFade": true,
+            "organizeMenu": true,
+            "eagerLoad": true
         },
         "BetterUploadButton": {
-            "enabled": false
+            "enabled": true
         },
         "BiggerStreamPreview": {
             "enabled": false
@@ -105,7 +122,8 @@
             "enabled": false
         },
         "ClientTheme": {
-            "enabled": false
+            "enabled": false,
+            "color": "313338"
         },
         "ColorSighted": {
             "enabled": false
@@ -135,7 +153,10 @@
             "enabled": false
         },
         "Dearrow": {
-            "enabled": false
+            "enabled": false,
+            "hideButton": false,
+            "replaceElements": 0,
+            "dearrowByDefault": true
         },
         "Decor": {
             "enabled": false
@@ -165,19 +186,20 @@
             "transformCompoundSentence": false
         },
         "FakeProfileThemes": {
-            "enabled": false
+            "enabled": false,
+            "nitroFirst": true
         },
         "FavoriteEmojiFirst": {
             "enabled": false
         },
         "FavoriteGifSearch": {
-            "enabled": false
+            "enabled": true
         },
         "FixCodeblockGap": {
             "enabled": false
         },
         "FixSpotifyEmbeds": {
-            "enabled": true
+            "enabled": false
         },
         "FixYoutubeEmbeds": {
             "enabled": true
@@ -214,7 +236,14 @@
             "enabled": false
         },
         "ImageZoom": {
-            "enabled": false
+            "enabled": false,
+            "saveZoomValues": true,
+            "invertScroll": true,
+            "nearestNeighbour": false,
+            "square": false,
+            "zoom": 2,
+            "size": 100,
+            "zoomSpeed": 0.5
         },
         "ImplicitRelationships": {
             "enabled": false
@@ -235,7 +264,8 @@
             "enabled": false
         },
         "MentionAvatars": {
-            "enabled": false
+            "enabled": true,
+            "showAtSymbol": true
         },
         "MessageClickActions": {
             "enabled": false
@@ -302,7 +332,7 @@
             "enabled": false
         },
         "NoProfileThemes": {
-            "enabled": false
+            "enabled": true
         },
         "NoReplyMention": {
             "enabled": false
@@ -362,7 +392,7 @@
             "enabled": false
         },
         "PlainFolderIcon": {
-            "enabled": false
+            "enabled": true
         },
         "PlatformIndicators": {
             "enabled": false
@@ -515,7 +545,9 @@
             "enabled": false
         },
         "ViewIcons": {
-            "enabled": true
+            "enabled": true,
+            "format": "webp",
+            "imgSize": "1024"
         },
         "ViewRaw": {
             "enabled": false
@@ -598,6 +630,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1730285687532
+        "settingsSyncVersion": 1732399236216
     }
 }
