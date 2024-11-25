@@ -9,6 +9,8 @@
 [aria-label="Notification Settings"],
 [aria-label="Threads"],
 [class^="inviteToolbar"] [class^="divider"],
+[class^="upperContainer"] > [class^="toolbar"] > [class^="inviteToolbar"],
+[aria-label="Show User Profile"],
 
 /* new server, discover */
 ul [class^="tutorialContainer_"]:not(:first-of-type),
@@ -40,7 +42,10 @@ div[class^="scroller"] > section[class^="section"]:last-of-type,
 
 /* stickers */
 [class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(2),
-[id="sticker-picker-tab"]
+[id="sticker-picker-tab"],
+
+/* search friends */
+[class^="privateChannels"] > [class^="searchBar"]
 
 { display: none; }
 
@@ -85,6 +90,7 @@ foreignObject > div[class^="banner"]
         height: calc(var(--icon-size) - 15%);
     }
 
+
     /* scale down ping size */
     > ul [class^="lowerBadge"] {
         transform: scale(90%) !important;
@@ -101,6 +107,12 @@ foreignObject > div[class^="banner"]
         > [aria-label="Servers"] {
             display: flex;
             gap: var(--icon-gap);
+
+            /* server upper badge */
+            [class^="upperBadge"] {
+                top: 0;
+                right: -30%;
+            }
         }
 
         /* normalize size - home button */

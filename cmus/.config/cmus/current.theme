@@ -8,14 +8,12 @@ set color_info=yellow
 # Separator Color
 set color_separator=red
 
-# Statusline background
+# Statusline
 set color_statusline_bg=default
-#Statusline foreground
 set color_statusline_fg=white
 
-# Titleline background
+# Titleline
 set color_titleline_bg=red
-# Titleline foreground
 set color_titleline_fg=white
 
 # Terminal default as background
@@ -24,8 +22,8 @@ set color_win_bg=default
 # Currently Playing song
 set color_win_cur=red
 # Indicator over currently playing song
-set color_win_cur_sel_bg=red
-set color_win_cur_sel_fg=white
+set color_win_cur_sel_bg=white
+set color_win_cur_sel_fg=black
 
 # Browser Directory Colors
 set color_win_dir=white
@@ -33,17 +31,17 @@ set color_win_dir=white
 # Playlist browser general text color
 set color_win_fg=white
 # Selected inactive Directory of currently playing Album/Song
-set color_win_inactive_cur_sel_bg=white
-set color_win_inactive_cur_sel_fg=black
+set color_win_inactive_cur_sel_bg=red
+set color_win_inactive_cur_sel_fg=white
 
 # Selected inactive Directory
-set color_win_inactive_sel_bg=white
-set color_win_inactive_sel_fg=black
+set color_win_inactive_sel_bg=red
+set color_win_inactive_sel_fg=white
 
 # Indicator color
-set color_win_sel_bg=red
-set color_win_sel_fg=white
+set color_win_sel_bg=white
+set color_win_sel_fg=black
 
-# Artist/Album / Track Heading
+# Artist/Album/Track Heading
 set color_win_title_bg=default
 set color_win_title_fg=red
