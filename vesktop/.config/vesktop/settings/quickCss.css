@@ -15,7 +15,7 @@
 /* new server, discover */
 ul [class^="tutorialContainer_"]:not(:first-of-type),
 ul [class^="footer"],
-ul > div[class^="scroller"] > [class^="listItem"],
+div[class^="scroller"] > [class^="listItem"],
 
 /* profiles */
 [class^="avatarDecoration"],
@@ -69,11 +69,6 @@ foreignObject > div[class^="banner"]
     margin-top: calc(var(--nav-height) + var(--pad) + var(--nav-gap));
 }
 
-/* by removing sidebar, move every element to the left */
-[class^="container"] > div[class^="base"] {
-    margin: var(--pad);
-}
-
 /* navigation bar */
 [class^="container"] > nav {
     position: absolute;
@@ -90,6 +85,10 @@ foreignObject > div[class^="banner"]
         height: calc(var(--icon-size) - 15%);
     }
 
+    /* by removing sidebar, move every element to the left */
+    > div[class^="base"] {
+        margin: var(--pad);
+    }
 
     /* scale down ping size */
     > ul [class^="lowerBadge"] {
@@ -97,7 +96,7 @@ foreignObject > div[class^="banner"]
     }
 
     /* navigation container flexbox */
-    > ul > [class^="scroller"] {
+    > ul > [class^="itemsContainer"] > [class^="scroller"] {
         display: flex;
         padding: 0 var(--icon-gap);
         gap: var(--icon-gap);
