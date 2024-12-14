@@ -15,7 +15,7 @@
 /* new server, discover */
 ul [class^="tutorialContainer_"]:not(:first-of-type),
 ul [class^="footer"],
-div[class^="scroller"] > [class^="listItem"],
+[class^="itemsContainer"] > div[class^="scroller"] > [class^="listItem"],
 
 /* profiles */
 [class^="avatarDecoration"],
@@ -70,93 +70,95 @@ foreignObject > div[class^="banner"]
 }
 
 /* navigation bar */
-[class^="container"] > nav {
-    position: absolute;
-    left: calc(var(--pad));
-    top: calc(var(--pad));
-    width: var(--nav-width);
-    height: var(--nav-height);
-    z-index: 1;
-    margin: 0;
-
-    /* current server indicator */
-    [class^="pill"] {
-        transform: rotate(90deg) translateX(345%) translateY(-45%);
-        height: calc(var(--icon-size) - 15%);
-    }
-
+[class^="container"] {
     /* by removing sidebar, move every element to the left */
     > div[class^="base"] {
         margin: var(--pad);
     }
 
-    /* scale down ping size */
-    > ul [class^="lowerBadge"] {
-        transform: scale(90%) !important;
-    }
+    > nav {
+        position: absolute;
+        left: calc(var(--pad));
+        top: calc(var(--pad));
+        width: var(--nav-width);
+        height: var(--nav-height);
+        z-index: 1;
+        margin: 0;
 
-    /* navigation container flexbox */
-    > ul > [class^="itemsContainer"] > [class^="scroller"] {
-        display: flex;
-        padding: 0 var(--icon-gap);
-        gap: var(--icon-gap);
-        overflow: scroll hidden !important;
+        /* current server indicator */
+        [class^="pill"] {
+            transform: rotate(90deg) translateX(345%) translateY(-45%);
+            height: calc(var(--icon-size) - 15%);
+        }
 
-        /* server scroller */
-        > [aria-label="Servers"] {
+        /* scale down ping size */
+        > ul [class^="lowerBadge"] {
+            transform: scale(90%) !important;
+        }
+
+        /* navigation container flexbox */
+        > ul > [class^="itemsContainer"] > [class^="scroller"] {
             display: flex;
+            padding: 0 var(--icon-gap);
             gap: var(--icon-gap);
+            overflow: scroll hidden !important;
 
-            /* server upper badge */
-            [class^="upperBadge"] {
-                top: 0;
-                right: -30%;
+            /* server scroller */
+            > [aria-label="Servers"] {
+                display: flex;
+                gap: var(--icon-gap);
+
+                /* server upper badge */
+                [class^="upperBadge"] {
+                    top: 0;
+                    right: -30%;
+                }
             }
-        }
 
-        /* normalize size - home button */
-        > [class^="tutorialContainer"] > [class^="listItem"] {
-            width: var(--icon-size);
-            height: var(--icon-size);
-
-            > [class^="listItem"] > [class^="wrapper"] {
-                width: var(--icon-size);
-                height: var(--icon-size);
-            }
-        }
-
-        /* normalize size - individual DM buttons */
-        > div[style^="opacity: 1;"] {
-            height: var(--icon-size) !important;
-            width: var(--icon-size) !important;
-
-            > [class^="listItem"] {
+            /* normalize size - home button */
+            > [class^="tutorialContainer"] > [class^="listItem"] {
                 width: var(--icon-size);
                 height: var(--icon-size);
 
-                > [class^="listItemWrapper"] > [class^="wrapper"] {
+                > [class^="listItem"] > [class^="wrapper"] {
+                    width: var(--icon-size);
+                    height: var(--icon-size);
+                }
+            }
+
+            /* normalize size - individual DM buttons */
+            > div[style^="opacity: 1;"] {
+                height: var(--icon-size) !important;
+                width: var(--icon-size) !important;
+
+                > [class^="listItem"] {
+                    width: var(--icon-size);
+                    height: var(--icon-size);
+
+                    > [class^="listItemWrapper"] > [class^="wrapper"] {
+                        width: var(--icon-size);
+                        height: var(--icon-size);
+                    }
+                }
+            }
+
+            /* normalize size - individual server buttons */
+            > [aria-label="Servers"] > [class^="listItem"] {
+                width: var(--icon-size);
+                height: var(--icon-size);
+
+                > div > div > [class^="wrapper"] {
                     width: var(--icon-size);
                     height: var(--icon-size);
                 }
             }
         }
 
-        /* normalize size - individual server buttons */
-        > [aria-label="Servers"] > [class^="listItem"] {
-            width: var(--icon-size);
+        /* scale server icons down */
+        svg {
             height: var(--icon-size);
-
-            > div > div > [class^="wrapper"] {
-                width: var(--icon-size);
-                height: var(--icon-size);
-            }
+            width: var(--icon-size);
         }
-    }
-
-    /* scale server icons down */
-    svg {
-        height: var(--icon-size);
-        width: var(--icon-size);
     }
 }
 
