@@ -1,50 +1,50 @@
 {
     "layer": "top",
     "position": "top",
-    "spacing": 0,
     "modules-left": [
         "hyprland/workspaces"
     ],
     "modules-center": [
         "clock",
-	"bluetooth",
-	"custom/music",
+        "bluetooth",
+        "custom/music"
     ],
     "modules-right": [
         "tray",
         "network",
-	"backlight",
+        "backlight",
         "wireplumber",
-        "battery",
+        "battery"
     ],
     "custom/music": {
-        "format": "  {}",
+        "format": " {}",
         "escape": true,
         "interval": 5,
         "tooltip": false,
-        "exec": "sleep 0.1 && ~/.config/waybar/scripts/play-pause.sh",
+        "exec": "~/.config/waybar/scripts/play-pause.sh",
         "on-click": "playerctl --player=cmus play-pause",
-	"on-scroll-up" : "playerctl --player=cmus next",
-	"on-scroll-down" : "playerctl --player=cmus previous",
+        "on-scroll-up": "playerctl --player=cmus next",
+        "on-scroll-down": "playerctl --player=cmus previous",
         "max-length": 50
     },
     "bluetooth": {
-	"format": "",
-	"format-on": "󰂱",
-	"format-connected": "",
-	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+        "format": "",
+        "format-on": "󰂱",
+        "format-connected": "",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
     },
     "hyprland/workspaces": {
         "on-click": "activate",
         "format": "{icon}",
-	"show-special": true,
+        "show-special": true,
         "format-icons": {
             "default": "",
-	    "md": "",
-	    "codeblocks": "󰙲 ",
+            "discord": "",
+            "music": "",
+            "codeblocks": "󰙲",
             "1": "1",
             "2": "2",
             "3": "3",
@@ -53,97 +53,75 @@
             "6": "6",
             "7": "7",
             "8": "8",
-            "9": "9",
-        },
+            "9": "9"
+        }
     },
     "clock": {
-        "format": "  {:%H:%M}",
-	"format-alt": "󰃭 {:%A | %d/%m/%Y | (%R)}",
+        "format": " {:%H:%M}",
+        "format-alt": "󰃭 {:%A | %d/%m/%Y | (%R)}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
-            "mode"          : "year",
-            "mode-mon-col"  : 3,
-            "weeks-pos"     : "right",
-            "on-scroll"     : 1,
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
             "format": {
-		"months":     "<span color='#ffead3'><b>{}</b></span>",
-		"days":       "<span color='#ecc6d9'><b>{}</b></span>",
-		"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-		"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-	    }
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
         },
-        "actions":  {
+        "actions": {
             "on-click-right": "mode",
-	    "on-scroll-up": "shift_up",
-	    "on-scroll-down": "shift_down"
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
         }
     },
     "network": {
         "format-wifi" : "{icon}",
-        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
         "format-ethernet": "󰈀",
         "format-disconnected" : "󱘖",
-	"tooltip-format-wifi": "{icon}  {essid}\n󰩟  {ipaddr}",
-        "tooltip-format-ethernet": "󰈀  {ifname}\n󰩠  {ipaddr}",
-	"tooltip-format-disconnected": "Disconnected",
-	"interval": 5,
+        "tooltip-format-wifi": "{icon}  {essid}\n󰩟 {ipaddr}",
+        "tooltip-format-ethernet": "󰈀 {ifname}\n󰩠 {ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 5
     },
     "wireplumber": {
         "format": "{icon}",
-        "tooltip-format": "Volume: {volume}%",
         "format-muted": "󰝟",
-	"format-bluetooth": "󰂰",
+	    "format-bluetooth": "󰂰",
         "format-icons": {
-            "default": ["󰖀","󰕾"]
+            "default": [ "󰖀", "󰕾" ]
         },
+        "tooltip-format": "Volume: {volume}%",
         "scroll-step": 2
     },
     "battery": {
         "format": "{icon}",
         "format-icons": {
-            "charging": [
-                "󰢜",
-                "󰂆",
-                "󰂇",
-                "󰂈",
-                "󰢝",
-                "󰂉",
-                "󰢞",
-                "󰂊",
-                "󰂋",
-                "󰂅"
-            ],
-            "default": [
-                "󰁺",
-                "󰁻",
-                "󰁼",
-                "󰁽",
-                "󰁾",
-                "󰁿",
-                "󰂀",
-                "󰂁",
-                "󰂂",
-                "󰁹"
-            ]
+            "charging": [ "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅" ],
+            "default": [ "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ]
         },
-        "interval": 60,
         "states": {
             "warning": 20,
-            "critical": 10,
+            "critical": 10
         },
+        "interval": 60,
         "tooltip": true,
-	"tooltip-format": "Battery: {capacity}%",
+        "tooltip-format": "Battery: {capacity}%"
     },
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-	"tooltip": true,
-	"tooltip-format": "Brightness: {percent}%"
+        "format-icons": [ "", "", "", "", "", "", "", "", "" ],
+        "tooltip": true,
+        "tooltip-format": "Brightness: {percent}%"
     },
     "tray": {
-	"icon-size": 20,
-        "spacing": 10,
-    },
+        "icon-size": 20,
+        "spacing": 10
+    }
 }
