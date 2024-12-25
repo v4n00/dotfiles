@@ -41,7 +41,7 @@ div[class^="scroller"] > section[class^="section"]:last-of-type,
 [aria-label="Channels"] > div[style="height: 12px;"],
 
 /* stickers */
-[class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(2),
+[class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(3),
 [id="sticker-picker-tab"],
 
 /* search friends */
