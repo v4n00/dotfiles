@@ -5,9 +5,9 @@ title=$(playerctl --player=cmus metadata --format='{{ title }}')
 
 if [[ $status != "" ]]; then
     if [[ $status == "Playing" ]]; then
-	icon=""
+	    icon=""
     else
-	icon=""
+	    icon=""
     fi
     echo "$title $icon"
 fi
