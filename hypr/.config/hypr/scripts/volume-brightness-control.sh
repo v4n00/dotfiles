@@ -93,3 +93,4 @@ brightness_down)
     show_brightness_notif
     ;;
 esac
+

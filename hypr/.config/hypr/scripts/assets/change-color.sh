@@ -12,3 +12,4 @@ for svg_file in ./*.svg; do
   sed -i "s/fill=\"#\([0-9a-fA-F]\{6\}\)\"/fill=\"$new_color\"/g" "$svg_file"
   echo "Replaced color in $svg_file with $new_color"
 done
+
