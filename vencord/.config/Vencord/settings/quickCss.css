@@ -110,7 +110,7 @@ foreignObject > div[class^="banner"]
 
                 /* server upper badge */
                 [class^="upperBadge"] {
-                    top: 0;
+                    top: -5%;
                     right: -30%;
                 }
             }
