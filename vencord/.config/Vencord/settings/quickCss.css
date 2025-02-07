@@ -42,6 +42,7 @@ div[class^="animatedContainer"], /* server banner if boosted */
 div[data-list-item-id^="channels___boosts"], /* server boosts bar */
 div[class^="voiceChannelsButton"], /* button to reveal hidden VCs */
 div[class^="headerContent"] > div[class^="guildIcon"], /* server boost number icon */
+div[class^="headerContent"] > div[class^="headerChildren"], /* server title chevron */
 
 /* stickers */
 [class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(3), /* chat box sticker button */

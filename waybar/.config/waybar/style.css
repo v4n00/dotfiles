@@ -5,12 +5,12 @@
     min-height: 0;
 }
 
-window > box {margin: 0 0.25rem;}
-tooltip.background {background-color: transparent;}
-#workspaces button.active {background-color: @red;}
+window > box { margin: 0 0.25rem; }
+tooltip.background { background-color: transparent; }
+#workspaces button.active { background-color: @red; }
 
 tooltip label, #workspaces button,
-#custom-power, #custom-lock, #custom-reboot, #custom-logout, #custom-sleep, #custom-music,
+#custom-power, #custom-lock, #custom-reboot, #custom-logout, #custom-sleep,
 #battery, #backlight, #wireplumber, #network, #clock, #bluetooth, #tray {
     background-color: @bg;
     color: @fg;

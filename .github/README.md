@@ -12,7 +12,6 @@ This repository contains my dotfiles. I use [GNU Stow](https://www.gnu.org/softw
 - **Browser**: [Firefox](https://www.mozilla.org/en-US/firefox/)
 - **Launcher**: [Tofi](https://github.com/philj56/tofi)
 - **Bar**: [Waybar](https://github.com/Alexays/Waybar)
-- **File Manager**: [Yazi](https://yazi-rs.github.io/)
 - **Music Player**: [Cmus](https://cmus.github.io/)
 - **Font**: [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 - **Color Scheme**: [Gruvbox](https://github.com/morhetz/gruvbox)

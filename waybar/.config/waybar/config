@@ -7,7 +7,6 @@
     "modules-center": [
         "clock",
         "bluetooth",
-        "custom/music"
     ],
     "modules-right": [
         "tray",
@@ -16,17 +15,6 @@
         "wireplumber",
         "battery"
     ],
-    "custom/music": {
-        "format": " {}",
-        "escape": true,
-        "interval": 5,
-        "tooltip": false,
-        "exec": "~/.config/waybar/scripts/play-pause.sh",
-        "on-click": "playerctl --player=cmus play-pause",
-        "on-scroll-up": "playerctl --player=cmus next",
-        "on-scroll-down": "playerctl --player=cmus previous",
-        "max-length": 50
-    },
     "bluetooth": {
         "format": "",
         "format-on": "󰂱",
