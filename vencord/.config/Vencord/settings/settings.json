@@ -85,7 +85,7 @@
             "enabled": true
         },
         "ViewIcons": {
-            "enabled": true,
+            "enabled": false,
             "format": "webp",
             "imgSize": "1024"
         },
@@ -601,6 +601,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1738491846333
+        "settingsSyncVersion": 1738959285766
     }
 }

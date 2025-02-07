@@ -26,25 +26,7 @@ source $ZPLUGINDIR/git/git.plugin.zsh
 
 # services
 eval "$(starship init zsh)"
-eval "$(fzf --zsh)"
 eval "$(keychain --eval --quiet id_ed25519)"
-
-# yazi
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
 
 # options
 setopt auto_cd
@@ -70,7 +52,6 @@ alias hconff='cd ~/.config/hypr/hyprland'
 alias hconfs='cd ~/.config/hypr/scripts'
 alias kconf='$EDITOR ~/.config/kitty/kitty.conf'
 alias wconf='cd ~/.config/waybar'
-alias zshrc='$EDITOR ~/.zshrc'
 
 # aliases
 alias ls='ls --color'

@@ -1,51 +1,51 @@
 /* nitro */
-[data-list-item-id*="__nitro"],
-[data-list-item-id*="__shop"],
-[aria-label="Send a gift"],
+[data-list-item-id*="__nitro"], /* nitro section in dms */
+[data-list-item-id*="__shop"], /* shop section in dms */
+[aria-label="Send a gift"], /* send a gift button */
 
-/* top bar right side */
-[href="https://support.discord.com"],
-[class^="recentsIcon"],
-[aria-label="Notification Settings"],
-[aria-label="Threads"],
-[class^="inviteToolbar"] [class^="divider"],
-[class^="upperContainer"] > [class^="toolbar"] > [class^="inviteToolbar"],
-[aria-label="Show User Profile"],
+/* top header buttons */
+[href="https://support.discord.com"], /* help */
+[class^="recentsIcon"], /* inbox */
+[aria-label="Notification Settings"], /* notification settings */
+[aria-label="Threads"], /* threads */
+[aria-label="Hide Member List"], /* member list */
+[aria-label="Show User Profile"], /* user profile */
+[class^="upperContainer"] > [class^="toolbar"] > [class^="inviteToolbar"], /* group dm */
 
-/* new server, discover */
-ul [class^="tutorialContainer_"]:not(:first-of-type),
-ul [class^="footer"],
-[class^="itemsContainer"] > div[class^="scroller"] > [class^="listItem"],
+/* sidebar */
+ul [class^="tutorialContainer_"]:not(:first-of-type), /* add server button */
+ul [class^="footer"], /* discover button */
+[class^="itemsContainer"] > div[class^="scroller"] > [class^="listItem"], /* divider between servers and dms */
+[class^="privateChannels"] > [class^="searchBar"], /* friends search bar in dms bar */
 
 /* profiles */
-[class^="avatarDecoration"],
-[class^="profileEffects"],
-[aria-label="User Badges"],
-[aria-label^="Custom status:"],
-[class^="invisibleContainer"],
-[class^="mutuals"],
-[aria-label="Pronouns"],
-[class*="pronouns"] > [class^="dotSpacer"],
-[class^="usernameRow"] > [class^="nicknameIcons"],
-div[class^="scroller"] > section[class^="section"]:last-of-type,
+[class^="avatarDecoration"], /* chat box avatar decorations */
+[class^="profileEffects"], /* profile animations */
+[aria-label="User Badges"], /* profile badges */
+[aria-label^="Custom status:"], /* profile status */
+[class^="mutuals"], /* mutual servers and friends */
+[aria-label="Pronouns"], /* pronouns */
+[class*="pronouns"] > [class^="dotSpacer"], /* pronouns spacer dot */
 
-/* hide activity button */
-[aria-label="Start an Activity"],
-[class^="channelAppLauncher"],
-[class^="wrapper"] > [class^="buttonContainer"],
-[aria-label="Members"] > h3:first-of-type,
+/* activities and apps */
+[aria-label="Start an Activity"], /* app launcher button in VC and status bar */
+[class^="wrapper"] > [class^="buttonContainer"], /* app launcher whitepace */
+[class^="channelAppLauncher"], /* chat box app launcher button */
+[aria-label="Members"] > h3:first-of-type, /* members list activity dropdown */
 
-/* events */
-[aria-label="Channels"] > li > div[class^="containerDefault"],
-[aria-label="Channels"] > [class^="sectionDivider"],
-[aria-label="Channels"] > div[style="height: 12px;"],
+/* server bar */
+[aria-label="Channels"] > li > div[class^="containerDefault"], /* events button */
+[aria-label="Channels"] > [class^="sectionDivider"], /* events delimiter */
+[aria-label="Channels"] > div[style="height: 12px;"], /* events whitespace */
+[aria-label="Channels"] > div[aria-hidden="true"], /* events whitespace */
+div[class^="animatedContainer"], /* server banner if boosted */
+div[data-list-item-id^="channels___boosts"], /* server boosts bar */
+div[class^="voiceChannelsButton"], /* button to reveal hidden VCs */
+div[class^="headerContent"] > div[class^="guildIcon"], /* server boost number icon */
 
 /* stickers */
-[class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(3),
-[id="sticker-picker-tab"],
-
-/* search friends */
-[class^="privateChannels"] > [class^="searchBar"]
+[class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(3), /* chat box sticker button */
+[id="sticker-picker-tab"] /* sticker button inside gif/emoji picker */
 
 { display: none; }
 
@@ -53,9 +53,10 @@ div[class^="scroller"] > section[class^="section"]:last-of-type,
 foreignObject > div[class^="banner"]
 { background-image: none !important; }
 
-/* -------------------- */
+/* ---------------------- */
+/* server bar in top left */
+/* ---------------------- */
 
-/* small server bar */
 :root {
     --icon-size: 36px;
     --icon-gap: 10px;
