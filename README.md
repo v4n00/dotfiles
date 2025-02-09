@@ -8,6 +8,7 @@ This repository contains my dotfiles. I use [GNU Stow](https://www.gnu.org/softw
 - **WM**: [Hyprland](https://hyprland.org/)
 - **Terminal**: [Kitty](https://sw.kovidgoyal.net/kitty/)
 - **Shell**: [Zsh](https://www.zsh.org/)
+- **File browser**: `cd, ls, rm, mv, cp`
 - **Editor**: [Neovim](https://neovim.io/)
 - **Browser**: [Firefox](https://www.mozilla.org/en-US/firefox/)
 - **Launcher**: [Tofi](https://github.com/philj56/tofi)
@@ -18,4 +19,4 @@ This repository contains my dotfiles. I use [GNU Stow](https://www.gnu.org/softw
 
 ## Preview
 
-![Screenshot](./preview.png)
+![Preview screenshot](./.github/preview.png)
