@@ -1,5 +1,5 @@
 #!/bin/bash
-emoji=$(sed '1,/^### DATA ###$/d' $0 | tofi "$@" | cut -d ' ' -f 1 | tr -d '\n')
+emoji=$(sed '1,/^### DATA ###$/d' $0 | tofi --prompt-text "emoji: " "$@" | cut -d ' ' -f 1 | tr -d '\n')
 echo -n $emoji | wtype -
 echo -n $emoji | wl-copy
 exit

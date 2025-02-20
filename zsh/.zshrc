@@ -26,7 +26,7 @@ source $ZPLUGINDIR/git/git.plugin.zsh
 
 # services
 eval "$(starship init zsh)"
-eval "$(keychain --eval --quiet id_ed25519)"
+eval "$(keychain --eval --quiet)"
 
 # options
 setopt auto_cd

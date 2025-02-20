@@ -15,6 +15,7 @@
 /* sidebar */
 ul [class^="tutorialContainer_"]:not(:first-of-type), /* add server button */
 ul [class^="footer"], /* discover button */
+[class^="perksDemoContainer__5dec7"], /* nitro stream */
 [class^="itemsContainer"] > div[class^="scroller"] > [class^="listItem"], /* divider between servers and dms */
 [class^="privateChannels"] > [class^="searchBar"], /* friends search bar in dms bar */
 
