@@ -10,7 +10,7 @@ This repository contains my dotfiles. I use [GNU Stow](https://www.gnu.org/softw
 - **Shell**: [Zsh](https://www.zsh.org/)
 - **File browser**: `cd, ls, rm, mv, cp`
 - **Editor**: [Neovim](https://neovim.io/)
-- **Browser**: [Firefox](https://www.mozilla.org/en-US/firefox/)
+- **Browser**: [Waterfox](https://www.waterfox.net/)
 - **Launcher**: [Tofi](https://github.com/philj56/tofi)
 - **Bar**: [Waybar](https://github.com/Alexays/Waybar)
 - **Music Player**: [Cmus](https://cmus.github.io/)
