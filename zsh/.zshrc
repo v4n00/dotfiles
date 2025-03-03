@@ -56,6 +56,7 @@ alias wconf='cd ~/.config/waybar'
 # aliases
 alias ls='ls --color'
 alias grep='grep --color'
+alias history='history 1'
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
@@ -77,14 +78,15 @@ alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
 alias v='$EDITOR'
+alias vim='$EDITOR'
 
 # history
 HISTSIZE=10000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
+setopt append_history
+setopt share_history
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups

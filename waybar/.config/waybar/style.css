@@ -17,5 +17,6 @@ tooltip label, #workspaces button,
     margin: 0.5rem 0.25rem;
     padding: 0.4rem 1rem;
     border: 0.15rem solid @red;
+    border-radius: 0;
 }
 
