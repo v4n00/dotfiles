@@ -5,11 +5,11 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "clock",
-        "bluetooth",
+        "clock"
     ],
     "modules-right": [
         "tray",
+        "bluetooth",
         "network",
         "backlight",
         "wireplumber",

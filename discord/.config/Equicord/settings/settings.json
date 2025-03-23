@@ -23,7 +23,7 @@
             "enabled": true
         },
         "DynamicImageModalAPI": {
-            "enabled": false
+            "enabled": true
         },
         "MemberListDecoratorsAPI": {
             "enabled": false
@@ -465,7 +465,7 @@
             "enabled": false
         },
         "ServerInfo": {
-            "enabled": false
+            "enabled": true
         },
         "ServerListIndicators": {
             "enabled": false
@@ -590,7 +590,9 @@
             "enabled": false
         },
         "ViewIcons": {
-            "enabled": false
+            "enabled": true,
+            "format": "webp",
+            "imgSize": "1024"
         },
         "ViewRaw": {
             "enabled": false
@@ -602,7 +604,8 @@
             "enabled": false
         },
         "VolumeBooster": {
-            "enabled": true
+            "enabled": true,
+            "multiplier": 2
         },
         "WhoReacted": {
             "enabled": false
@@ -1170,6 +1173,27 @@
         },
         "SupportHelper": {
             "enabled": true
+        },
+        "DisableAnimations": {
+            "enabled": false
+        },
+        "GitHubRepos": {
+            "enabled": false
+        },
+        "RandomVoice": {
+            "enabled": false
+        },
+        "Remix": {
+            "enabled": false
+        },
+        "AlwaysExpandProfile": {
+            "enabled": false
+        },
+        "Equissant": {
+            "enabled": false
+        },
+        "Freaky": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1182,7 +1206,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1741773915750
+        "settingsSyncVersion": 1742425556753
     },
     "ignoreResetWarning": false,
     "userCssVars": {}
