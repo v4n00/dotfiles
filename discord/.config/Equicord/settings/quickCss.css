@@ -45,9 +45,10 @@ div[class^="voiceChannelsButton"], /* button to reveal hidden VCs */
 div[class^="headerContent"] > div[class^="guildIcon"], /* server boost number icon */
 div[class^="headerContent"] > div[class^="headerChildren"], /* server title chevron */
 
-/* stickers */
+/* chat */
 [class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(3), /* chat box sticker button */
-[id="sticker-picker-tab"] /* sticker button inside gif/emoji picker */
+[id="sticker-picker-tab"], /* sticker button inside gif/emoji picker */
+[class^="threadSuggestionBar"] /* suggest starting thread */
 
 { display: none; }
 
