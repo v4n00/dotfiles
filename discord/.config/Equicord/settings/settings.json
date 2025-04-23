@@ -197,7 +197,8 @@
             "enabled": false
         },
         "FavoriteGifSearch": {
-            "enabled": true
+            "enabled": true,
+            "searchOption": "hostandpath"
         },
         "FixCodeblockGap": {
             "enabled": false
@@ -1094,7 +1095,7 @@
             "databaseToUse": "https://userpfp.github.io/UserPFP/source/data.json"
         },
         "UwUifier": {
-            "enabled": false
+            "enabled": true
         },
         "VcNarratorCustom": {
             "enabled": false
@@ -1192,6 +1193,15 @@
         },
         "Freaky": {
             "enabled": false
+        },
+        "InstantScreenshare": {
+            "enabled": false
+        },
+        "LastActive": {
+            "enabled": false
+        },
+        "PingNotifications": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1204,7 +1214,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1743598426309
+        "settingsSyncVersion": 1744325425994
     },
     "ignoreResetWarning": false,
     "userCssVars": {}

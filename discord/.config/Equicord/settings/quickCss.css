@@ -14,7 +14,7 @@
 
 /* sidebar */
 [class^="tutorialContainer_"]:not(:first-of-type), /* add server button */
-[class^="itemsContainer"] > [class^="stack"] > [class^="listItem"], /* discover button and divider between friends and servers */
+[class^="itemsContainer"] > [class^="stack"] > [class^="listItem"], /* discover button and divider between friends and servers */   
 [class^="privateChannels"] > [class^="searchBar"], /* friends search bar in dms bar */
 
 /* profiles */
@@ -77,6 +77,9 @@ div[class^="base"] {
                 padding-top: 0.4rem; /* add top padding for notif pill */
                 flex-direction: row; /* instead of column bar */
                 overflow: scroll !important; /* scroll in case of multiple notifs */
+
+                /* unread dms */
+                div[id^="guild-list-unread-dms"] { width: fit-content; }
 
                 /* rotate and center pill */
                 div[class^="pill"] { transform: translateY(-55%) translateX(195%) rotate(90deg); }
