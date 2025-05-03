@@ -10,10 +10,6 @@
     "modules-right": [
         "tray",
         "bluetooth",
-        "network",
-        "backlight",
-        "wireplumber",
-        "battery"
     ],
     "bluetooth": {
         "format": "",
@@ -65,47 +61,6 @@
             "on-scroll-up": "shift_up",
             "on-scroll-down": "shift_down"
         }
-    },
-    "network": {
-        "format-wifi" : "{icon}",
-        "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
-        "format-ethernet": "󰈀",
-        "format-disconnected" : "󱘖",
-        "tooltip-format-wifi": "{icon}  {essid}\n󰩟 {ipaddr}",
-        "tooltip-format-ethernet": "󰈀 {ifname}\n󰩠 {ipaddr}",
-        "tooltip-format-disconnected": "Disconnected",
-        "interval": 5
-    },
-    "wireplumber": {
-        "format": "{icon}",
-        "format-muted": "󰝟",
-	    "format-bluetooth": "󰂰",
-        "format-icons": {
-            "default": [ "󰖀", "󰕾" ]
-        },
-        "tooltip-format": "Volume: {volume}%",
-        "scroll-step": 2
-    },
-    "battery": {
-        "format": "{icon}",
-        "format-icons": {
-            "charging": [ "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅" ],
-            "default": [ "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ]
-        },
-        "states": {
-            "warning": 20,
-            "critical": 10
-        },
-        "interval": 60,
-        "tooltip": true,
-        "tooltip-format": "Battery: {capacity}%"
-    },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon}",
-        "format-icons": [ "", "", "", "", "", "", "", "", "" ],
-        "tooltip": true,
-        "tooltip-format": "Brightness: {percent}%"
     },
     "tray": {
         "icon-size": 20,

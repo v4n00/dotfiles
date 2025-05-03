@@ -372,7 +372,7 @@
             "enabled": false
         },
         "NSFWGateBypass": {
-            "enabled": false
+            "enabled": true
         },
         "Oneko": {
             "enabled": false
@@ -1095,7 +1095,9 @@
             "databaseToUse": "https://userpfp.github.io/UserPFP/source/data.json"
         },
         "UwUifier": {
-            "enabled": true
+            "enabled": true,
+            "uwuEverything": false,
+            "uwuEveryMessage": false
         },
         "VcNarratorCustom": {
             "enabled": false
@@ -1202,6 +1204,21 @@
         },
         "PingNotifications": {
             "enabled": false
+        },
+        "CopyStickerLinks": {
+            "enabled": false
+        },
+        "CopyProfileColors": {
+            "enabled": false
+        },
+        "Morse": {
+            "enabled": false
+        },
+        "NoOnboarding": {
+            "enabled": false
+        },
+        "ToastNotifications": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1214,7 +1231,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1744325425994
+        "settingsSyncVersion": 1746033171021
     },
     "ignoreResetWarning": false,
     "userCssVars": {}

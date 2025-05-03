@@ -29,8 +29,6 @@
 /* activities and apps */
 [aria-label="Start an Activity"], /* app launcher button in VC and status bar */
 [class^="channelAppLauncher"], /* chat box app launcher button */
-[aria-label="Members"] > h3:first-of-type, /* members list activity dropdown */
-[aria-label="Members"] > div:not([class]), /* member list activitities */
 
 /* server bar */
 [aria-label="Channels"] > li > div[class^="containerDefault"], /* events button */
