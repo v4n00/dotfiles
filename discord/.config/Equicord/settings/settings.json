@@ -167,9 +167,6 @@
         "DontRoundMyTimestamps": {
             "enabled": false
         },
-        "EmoteCloner": {
-            "enabled": false
-        },
         "Experiments": {
             "enabled": false
         },
@@ -249,7 +246,7 @@
             "enabled": false
         },
         "ImageZoom": {
-            "enabled": false
+            "enabled": true
         },
         "ImplicitRelationships": {
             "enabled": false
@@ -410,11 +407,11 @@
         "PlatformIndicators": {
             "enabled": false,
             "list": true,
-            "badges": true,
             "messages": true,
             "colorMobileIndicator": true,
             "showBots": false,
-            "ConsoleIcon": "equicord"
+            "ConsoleIcon": "equicord",
+            "profiles": true
         },
         "PreviewMessage": {
             "enabled": false
@@ -603,7 +600,7 @@
             "enabled": false
         },
         "VolumeBooster": {
-            "enabled": true,
+            "enabled": false,
             "multiplier": 2
         },
         "WhoReacted": {
@@ -730,9 +727,6 @@
         "DontFilterMe": {
             "enabled": false
         },
-        "EmojiDumper": {
-            "enabled": false
-        },
         "Encryptcord": {
             "enabled": false
         },
@@ -830,7 +824,11 @@
             "enabled": false
         },
         "ImagePreview": {
-            "enabled": false
+            "enabled": true,
+            "messageImages": true,
+            "messageAvatars": true,
+            "messageLinks": true,
+            "messageStickers": true
         },
         "ImgToGif": {
             "enabled": false
@@ -1095,7 +1093,7 @@
             "databaseToUse": "https://userpfp.github.io/UserPFP/source/data.json"
         },
         "UwUifier": {
-            "enabled": true,
+            "enabled": false,
             "uwuEverything": false,
             "uwuEveryMessage": false
         },
@@ -1146,7 +1144,7 @@
             "disableToasts": false
         },
         "WhosWatching": {
-            "enabled": false,
+            "enabled": true,
             "showPanel": true
         },
         "WigglyText": {
@@ -1170,7 +1168,8 @@
             "settingsLocation": "top"
         },
         "EquicordHelper": {
-            "enabled": true
+            "enabled": true,
+            "hideClanBadges": false
         },
         "SupportHelper": {
             "enabled": true
@@ -1219,6 +1218,51 @@
         },
         "ToastNotifications": {
             "enabled": false
+        },
+        "GuildPickerDumper": {
+            "enabled": false
+        },
+        "NicknameIconsAPI": {
+            "enabled": false
+        },
+        "AutoJump": {
+            "enabled": false
+        },
+        "BypassPinPrompt": {
+            "enabled": false
+        },
+        "FastDeleteChannels": {
+            "enabled": false
+        },
+        "ForwardAnywhere": {
+            "enabled": false
+        },
+        "Ingtoninator": {
+            "enabled": false
+        },
+        "Soggy": {
+            "enabled": false
+        },
+        "SplitLargeMessages": {
+            "enabled": false
+        },
+        "SpotifyActivityToggle": {
+            "enabled": false
+        },
+        "WallpaperFree": {
+            "enabled": false
+        },
+        "BadgeAPI": {
+            "enabled": true
+        },
+        "ExpressionCloner": {
+            "enabled": false
+        },
+        "ExpandedUserTags": {
+            "enabled": false
+        },
+        "CustomFolderIcons": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1231,7 +1275,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1746033171021
+        "settingsSyncVersion": 1748703376936
     },
     "ignoreResetWarning": false,
     "userCssVars": {}
