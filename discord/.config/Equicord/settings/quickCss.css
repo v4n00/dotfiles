@@ -45,7 +45,7 @@ div[class^="sidebarResizeHandle"], /* resize handle for sidebar */
 div[class^="unreadMentionsIndicator"], /* unread indicator when scrolling server */
 
 /* chat */
-[class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(2), /* chat box sticker button */
+[class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(3), /* chat box sticker button */
 [id="sticker-picker-tab"], /* sticker button inside gif/emoji picker */
 [class^="threadSuggestionBar"] /* suggest starting thread */
 
