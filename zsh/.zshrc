@@ -28,6 +28,7 @@ export TERMCMD='kitty'
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^f' autosuggest-accept
+bindkey -e
 
 # aliases
 alias hconf='cd ~/.config/hypr'
