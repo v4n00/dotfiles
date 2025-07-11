@@ -9,12 +9,12 @@ This repository contains my dotfiles. I use [GNU Stow](https://www.gnu.org/softw
 - **Terminal**: [Kitty](https://sw.kovidgoyal.net/kitty/)
 - **Shell**: [Zsh](https://www.zsh.org/)
 - **File browser**: `cd, ls, rm, mv, cp`
-- **Editor**: [Neovim](https://neovim.io/)
+- **Editor**: minimal [Neovim](https://neovim.io/) and [Zed](https://zed.dev/)
 - **Browser**: [Waterfox](https://www.waterfox.net/)
 - **Launcher**: [Tofi](https://github.com/philj56/tofi)
 - **Bar**: [Waybar](https://github.com/Alexays/Waybar)
 - **Font**: [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-- **Color Scheme**: [Gruvbox](https://github.com/morhetz/gruvbox)
+- **Color Scheme**: [Gruvbox](https://github.com/sainnhe/gruvbox-material) Dark Hard (red accent)
 
 ## Preview
 
