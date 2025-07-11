@@ -453,7 +453,7 @@
             "enabled": false
         },
         "RoleColorEverywhere": {
-            "enabled": false
+            "enabled": true
         },
         "SecretRingToneEnabler": {
             "enabled": false
@@ -1078,9 +1078,6 @@
         "Title": {
             "enabled": false
         },
-        "toggleVideoBind": {
-            "enabled": false
-        },
         "TosuRPC": {
             "enabled": false
         },
@@ -1291,6 +1288,12 @@
         },
         "FriendCloud": {
             "enabled": false
+        },
+        "OrbolayBridge": {
+            "enabled": false
+        },
+        "ToggleVideoBind": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1303,7 +1306,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1751104659552
+        "settingsSyncVersion": 1751642524020
     },
     "ignoreResetWarning": false,
     "userCssVars": {}
