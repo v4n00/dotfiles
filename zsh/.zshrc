@@ -1,3 +1,5 @@
+[[ "$(tty)" == "/dev/tty1" ]] && exec Hyprland
+
 autoload -Uz compinit && compinit
 
 # plugins
