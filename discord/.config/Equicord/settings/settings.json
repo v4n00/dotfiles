@@ -453,7 +453,13 @@
             "enabled": false
         },
         "RoleColorEverywhere": {
-            "enabled": true
+            "enabled": true,
+            "chatMentions": true,
+            "memberList": true,
+            "voiceUsers": true,
+            "reactorsList": true,
+            "pollResults": true,
+            "colorChatMessages": false
         },
         "SecretRingToneEnabler": {
             "enabled": false
@@ -1294,6 +1300,12 @@
         },
         "ToggleVideoBind": {
             "enabled": false
+        },
+        "ExportMessages": {
+            "enabled": false
+        },
+        "GuildTagSettings": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1306,7 +1318,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1751642524020
+        "settingsSyncVersion": 1752522171707
     },
     "ignoreResetWarning": false,
     "userCssVars": {}
