@@ -5,8 +5,8 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "dark",
-    "light": "Gruvbox Light Hard",
-    "dark": "Gruvbox Dark Hard"
+    "light": "Gruvbox Dark Hard Edit",
+    "dark": "Gruvbox Dark Hard Edit"
   },
   "minimap": {
     "show": "always"
