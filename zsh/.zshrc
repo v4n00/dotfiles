@@ -7,7 +7,6 @@ ZPLUGINDIR=$HOME/.zsh/plugins
 [[ ! -d $ZPLUGINDIR/zsh-autosuggestions ]] && git clone https://github.com/zsh-users/zsh-autosuggestions $ZPLUGINDIR/zsh-autosuggestions; source $ZPLUGINDIR/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 [[ ! -d $ZPLUGINDIR/zsh-syntax-highlighting ]] && git clone https://github.com/zsh-users/zsh-syntax-highlighting/ $ZPLUGINDIR/zsh-syntax-highlighting; source $ZPLUGINDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 [[ ! -d $ZPLUGINDIR/zsh-you-should-use ]] && git clone https://github.com/MichaelAquilina/zsh-you-should-use $ZPLUGINDIR/zsh-you-should-use; source $ZPLUGINDIR/zsh-you-should-use/zsh-you-should-use.plugin.zsh
-[[ ! -f $ZPLUGINDIR/git.plugin.zsh ]] && curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh -o $ZPLUGINDIR/git.plugin.zsh; source $ZPLUGINDIR/git.plugin.zsh
 
 # services
 eval "$(starship init zsh)"
@@ -47,12 +46,9 @@ alias history='history 1'
 alias md='mkdir -p'
 alias rd='rm -r'
 alias v='$EDITOR'
-alias vim='$EDITOR'
-alias sudo='sudo '
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
-alias -g ......='../../../../..'
 
 # history
 HISTSIZE=10000
