@@ -41,7 +41,7 @@
         }
     },
     "clock": {
-        "format": "󰃭 {:%d/%m/%Y | %R} ",
+        "format": "{:%d - %R}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",

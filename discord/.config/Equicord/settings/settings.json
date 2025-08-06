@@ -1271,9 +1271,6 @@
         "ExpressionCloner": {
             "enabled": false
         },
-        "ExpandedUserTags": {
-            "enabled": false
-        },
         "CustomFolderIcons": {
             "enabled": false
         },
@@ -1306,6 +1303,36 @@
         },
         "GuildTagSettings": {
             "enabled": false
+        },
+        "DiscordDevBanner": {
+            "enabled": false
+        },
+        "SaveFavoriteGIFs": {
+            "enabled": false
+        },
+        "MoreUserTags": {
+            "enabled": false
+        },
+        "BetterCommands": {
+            "enabled": false
+        },
+        "InviteDefaults": {
+            "enabled": false
+        },
+        "QuestFocused": {
+            "enabled": false
+        },
+        "Questify": {
+            "enabled": false
+        },
+        "SelfForward": {
+            "enabled": false
+        },
+        "TimelessClips": {
+            "enabled": false
+        },
+        "YouTubeMusicControls": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1318,7 +1345,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1752522171707
+        "settingsSyncVersion": 1754338726199
     },
     "ignoreResetWarning": false,
     "userCssVars": {}
