@@ -23,8 +23,12 @@
 [aria-label="User Badges"], /* profile badges */
 [aria-label^="Custom status:"], /* profile status */
 [class^="mutuals"], /* mutual servers and friends */
+[class*="clanTag"], /* clan tag */
+[class^="guildTagContainer"], /* clan tag in profile */
+div[class^="interactive"] > div[style^="background: linear-gradient"], /* nameplates */
 [aria-label="Pronouns"], /* pronouns */
 [class*="pronouns"] > [class^="dotSpacer"], /* pronouns spacer dot */
+[class^="nicknameIcons"], /* add note button */
 
 /* activities and apps */
 [aria-label="Start an Activity"], /* app launcher button in VC and status bar */

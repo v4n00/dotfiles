@@ -251,7 +251,8 @@
             "zoom": 2,
             "saveZoomValues": true,
             "nearestNeighbour": false,
-            "square": false
+            "square": false,
+            "showMetadata": true
         },
         "ImplicitRelationships": {
             "enabled": false
@@ -1333,6 +1334,18 @@
         },
         "YouTubeMusicControls": {
             "enabled": false
+        },
+        "ContentWarning": {
+            "enabled": false
+        },
+        "CopyStatusUrls": {
+            "enabled": false
+        },
+        "MusicControls": {
+            "enabled": false
+        },
+        "ShowResourceChannels": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1345,7 +1358,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1754338726199
+        "settingsSyncVersion": 1754917906438
     },
     "ignoreResetWarning": false,
     "userCssVars": {}
