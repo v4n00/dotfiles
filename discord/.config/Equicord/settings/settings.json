@@ -1200,9 +1200,6 @@
         "Remix": {
             "enabled": false
         },
-        "AlwaysExpandProfile": {
-            "enabled": false
-        },
         "Equissant": {
             "enabled": false
         },
@@ -1346,6 +1343,18 @@
         },
         "ShowResourceChannels": {
             "enabled": false
+        },
+        "AlwaysExpandProfiles": {
+            "enabled": false
+        },
+        "TiktokTTS": {
+            "enabled": false
+        },
+        "ImageFilename": {
+            "enabled": false
+        },
+        "Downloadify": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1358,7 +1367,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1754917906438
+        "settingsSyncVersion": 1755958951848
     },
     "ignoreResetWarning": false,
     "userCssVars": {}

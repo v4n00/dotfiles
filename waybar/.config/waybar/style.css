@@ -10,9 +10,7 @@ tooltip.background { background-color: transparent; }
 window > box { margin: 0 0.25rem; }
 #workspaces button.active { background-color: @red; }
 
-tooltip label, #workspaces button,
-#custom-power, #custom-lock, #custom-reboot, #custom-logout, #custom-sleep,
-#battery, #backlight, #wireplumber, #network, #clock, #bluetooth, #tray {
+tooltip label, #workspaces button, #clock, #tray {
     background-color: @bg;
     color: @fg;
     margin: 0.5rem 0.25rem;
