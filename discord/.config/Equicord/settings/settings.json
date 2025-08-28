@@ -1355,6 +1355,9 @@
         },
         "Downloadify": {
             "enabled": false
+        },
+        "Animalese": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1367,7 +1370,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1755958951848
+        "settingsSyncVersion": 1756222162726
     },
     "ignoreResetWarning": false,
     "userCssVars": {}
