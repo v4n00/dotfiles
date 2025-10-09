@@ -18,4 +18,4 @@ This repository contains my dotfiles. I use [GNU Stow](https://www.gnu.org/softw
 
 ## Preview
 
-![Preview screenshot](./.github/preview.png)
+![Preview screenshot](./preview.png)
