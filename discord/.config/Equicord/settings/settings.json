@@ -252,7 +252,8 @@
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
-            "showMetadata": true
+            "showMetadata": true,
+            "zoomSpeed": 0.5
         },
         "ImplicitRelationships": {
             "enabled": false
@@ -298,7 +299,8 @@
             "ignoreGuilds": "",
             "logEdits": true,
             "logDeletes": true,
-            "inlineEdits": true
+            "inlineEdits": true,
+            "showEditDiffs": false
         },
         "MessageTags": {
             "enabled": false
@@ -488,7 +490,10 @@
             "enabled": false
         },
         "ShowHiddenChannels": {
-            "enabled": false
+            "enabled": false,
+            "showMode": 0,
+            "channelStyle": 0,
+            "defaultAllowedUsersAndRolesDropdownState": true
         },
         "ShowHiddenThings": {
             "enabled": false,
@@ -507,9 +512,6 @@
             "enabled": false
         },
         "SilentTyping": {
-            "enabled": false
-        },
-        "SortFriendRequests": {
             "enabled": false
         },
         "SpotifyControls": {
@@ -853,9 +855,6 @@
         "InRole": {
             "enabled": false
         },
-        "JumpToStart": {
-            "enabled": false
-        },
         "Jumpscare": {
             "enabled": false
         },
@@ -1047,10 +1046,6 @@
         "StatusPresets": {
             "enabled": false
         },
-        "StatusWhilePlaying": {
-            "enabled": false,
-            "statusToSet": "dnd"
-        },
         "SteamStatusSync": {
             "enabled": false,
             "onlineStatus": "online",
@@ -1183,7 +1178,10 @@
         },
         "EquicordHelper": {
             "enabled": true,
-            "hideClanBadges": false
+            "hideClanBadges": false,
+            "disableCreateDMButton": false,
+            "disableDMContextMenu": false,
+            "noMirroredCamera": false
         },
         "SupportHelper": {
             "enabled": true
@@ -1195,9 +1193,6 @@
             "enabled": false
         },
         "RandomVoice": {
-            "enabled": false
-        },
-        "Remix": {
             "enabled": false
         },
         "Equissant": {
@@ -1358,20 +1353,59 @@
         },
         "Animalese": {
             "enabled": false
+        },
+        "ChatButtonsPlus": {
+            "enabled": false
+        },
+        "ShowMessageEmbeds": {
+            "enabled": false
+        },
+        "JumpTo": {
+            "enabled": false
+        },
+        "SortFriends": {
+            "enabled": false
+        },
+        "RemixRevived": {
+            "enabled": false
+        },
+        "AutoDNDWhilePlaying": {
+            "enabled": false,
+            "statusToSet": "dnd"
+        },
+        "ListenBrainzRPC": {
+            "enabled": false
+        },
+        "RecentDMSwitcher": {
+            "enabled": false
+        },
+        "StatusWhileActive": {
+            "enabled": false
+        },
+        "ToneIndicators": {
+            "enabled": false
+        },
+        "VoiceButtons": {
+            "enabled": false
+        },
+        "AudioPlayerAPI": {
+            "enabled": false
         }
     },
     "notifications": {
         "timeout": 5000,
         "position": "bottom-right",
         "useNative": "not-focused",
-        "logLimit": 50
+        "logLimit": 50,
+        "missed": true
     },
     "cloud": {
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1756222162726
+        "settingsSyncVersion": 1759502582482
     },
     "ignoreResetWarning": false,
-    "userCssVars": {}
+    "userCssVars": {},
+    "themeNames": {}
 }

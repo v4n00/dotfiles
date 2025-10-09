@@ -73,12 +73,13 @@ div[class^="base"] {
             margin: 0.4rem; /* margins */
             margin-top: 0; /* remove top margin for top padding so notif pill looks better */
             width: 100%; /* full size bar */
+            mask: none; /* remove gradient */
 
             > ul > div[class^="itemsContainer"] > div[class^="stack"] {
                 padding: 0; /* remove extra padding */
                 padding-top: 0.4rem; /* add top padding for notif pill */
                 flex-direction: row; /* instead of column bar */
-                overflow: scroll !important; /* scroll in case of multiple notifs */
+                overflow: scroll hidden !important; /* scroll in case of multiple notifs */
 
                 /* unread dms */
                 div[id^="guild-list-unread-dms"] { width: fit-content; }

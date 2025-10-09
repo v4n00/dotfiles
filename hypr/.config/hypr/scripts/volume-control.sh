@@ -2,9 +2,8 @@
 
 volume_step=2
 max_volume=100
-
-notification_timeout=1000
-assets=~/.config/hypr/scripts/assets
+timeout=1000
+assets="${HOME}/.config/hypr/scripts/assets"
 
 function get_volume {
     wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}'
@@ -28,7 +27,7 @@ function get_volume_icon {
 
 function show_volume_notif {
     get_volume_icon
-    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume -i "$volume_icon" "Volume" "Volume currently at $volume%"
+    notify-send -t $timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume -i "$volume_icon" "Volume control" "Volume currently at $volume%"
 }
 
 case $1 in
@@ -61,4 +60,3 @@ volume_mute)
     show_volume_notif
     ;;
 esac
-
