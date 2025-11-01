@@ -1181,7 +1181,8 @@
             "hideClanBadges": false,
             "disableCreateDMButton": false,
             "disableDMContextMenu": false,
-            "noMirroredCamera": false
+            "noMirroredCamera": false,
+            "removeActivitySection": false
         },
         "SupportHelper": {
             "enabled": true
@@ -1390,6 +1391,15 @@
         },
         "AudioPlayerAPI": {
             "enabled": false
+        },
+        "AutoZipper": {
+            "enabled": false
+        },
+        "KeyboardNavigation": {
+            "enabled": false
+        },
+        "ZipPreview": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1403,7 +1413,7 @@
         "authenticated": false,
         "url": "https://cloud.equicord.fyi/",
         "settingsSync": false,
-        "settingsSyncVersion": 1759502582482
+        "settingsSyncVersion": 1761668033034
     },
     "ignoreResetWarning": false,
     "userCssVars": {},

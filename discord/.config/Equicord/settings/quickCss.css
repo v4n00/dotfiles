@@ -1,6 +1,7 @@
 /* nitro */
 [data-list-item-id*="__nitro"], /* nitro section in dms */
 [data-list-item-id*="__shop"], /* shop section in dms */
+[data-list-item-id*="__quests"], /* quests section in dms */
 [aria-label="Send a gift"], /* send a gift button */
 
 /* top header buttons */
