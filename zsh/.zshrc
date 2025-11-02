@@ -8,6 +8,15 @@ ZPLUGINDIR=$HOME/.zsh/plugins
 [[ ! -d $ZPLUGINDIR/zsh-syntax-highlighting ]] && git clone https://github.com/zsh-users/zsh-syntax-highlighting/ $ZPLUGINDIR/zsh-syntax-highlighting; source $ZPLUGINDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 [[ ! -d $ZPLUGINDIR/zsh-you-should-use ]] && git clone https://github.com/MichaelAquilina/zsh-you-should-use $ZPLUGINDIR/zsh-you-should-use; source $ZPLUGINDIR/zsh-you-should-use/zsh-you-should-use.plugin.zsh
 
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 # services
 eval "$(starship init zsh)"
 eval "$(keychain --eval --quiet)"
