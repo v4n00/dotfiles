@@ -1,6 +1,9 @@
-[[ "$(tty)" == "/dev/tty1" ]] && exec Hyprland
-
+# services
 autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu select
+eval "$(starship init zsh)"
 
 # plugins
 ZPLUGINDIR=$HOME/.zsh/plugins
@@ -8,31 +11,10 @@ ZPLUGINDIR=$HOME/.zsh/plugins
 [[ ! -d $ZPLUGINDIR/zsh-syntax-highlighting ]] && git clone https://github.com/zsh-users/zsh-syntax-highlighting/ $ZPLUGINDIR/zsh-syntax-highlighting; source $ZPLUGINDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 [[ ! -d $ZPLUGINDIR/zsh-you-should-use ]] && git clone https://github.com/MichaelAquilina/zsh-you-should-use $ZPLUGINDIR/zsh-you-should-use; source $ZPLUGINDIR/zsh-you-should-use/zsh-you-should-use.plugin.zsh
 
-# yazi
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
-}
-
-# services
-eval "$(starship init zsh)"
-eval "$(keychain --eval --quiet)"
-
 # options
 setopt auto_cd
 setopt auto_pushd
-setopt pushd_ignore_dups
-setopt pushdminus
-
-# env
-export EDITOR='nvim'
-export MANPAGER='nvim +Man!'
-export PAGES='less'
-export BROWSER='waterfox'
-export TERMCMD='kitty' 
+export EDITOR='vim'
 
 # binds
 bindkey '^p' history-search-backward
@@ -41,11 +23,7 @@ bindkey '^f' autosuggest-accept
 bindkey -e
 
 # aliases
-alias hconf='cd ~/.config/hypr'
-alias hconff='cd ~/.config/hypr/hyprland'
-alias hconfs='cd ~/.config/hypr/scripts'
-alias wconf='cd ~/.config/waybar'
-alias sapps='cd ~/.local/share/Steam/steamapps/common'
+alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias ls='ls --color'
 alias l='ls -lah'
 alias ll='ls -lh'
@@ -53,8 +31,8 @@ alias lt='ls -lhtr'
 alias grep='grep --color'
 alias history='history 1'
 alias md='mkdir -p'
-alias rd='rm -r'
-alias v='$EDITOR'
+alias rd='rm -rf'
+alias mx='chmod a+x'
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
@@ -62,6 +40,7 @@ alias -g .....='../../../..'
 # history
 HISTSIZE=10000
 HISTFILE=~/.zsh_history
+HISTTIMEFORMAT="%F %T"
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt append_history
@@ -71,9 +50,3 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
-
-# completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu select
-
