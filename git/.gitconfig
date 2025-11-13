@@ -3,6 +3,9 @@
 	email = 105587619+v4n00@users.noreply.github.com
 	signingKey = ~/.ssh/id_ed25519.pub
 
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
 [push]
 	autoSetupRemote = true
 
