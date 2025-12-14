@@ -6,7 +6,7 @@
 
 /* sidebar */
 [class^="tutorialContainer_"]:not(:first-of-type), /* add server button */
-[class^="itemsContainer"] > [class^="stack"] > [class^="listItem"], /* discover button and divider between friends and servers */   
+[class^="itemsContainer"] > [class^="stack"] > [class^="listItem"], /* discover button and divider between friends and servers */
 [class^="privateChannels"] > [class^="searchBar"], /* friends search bar in dms bar */
 
 /* profiles */
@@ -51,13 +51,14 @@ div[class^="unreadMentionsIndicator"], /* unread indicator when scrolling server
 foreignObject > div[class^="banner"] { background-image: none !important; } /* disable nitro banner */
 div[class^="sidebar"] { width: 16rem !important; } /* fixed sidebar width */
 div[class^="base"] > div[class^="bar"] { display: none; } /* remove title bar */
-:root { --custom-app-top-bar-height: 0; } /* remove title bar whitespace */
+div[class^="bar"] { min-height: 0; } /* remove title bar whitespace */
 
 /* server bar up top */
 div[class^="base"] {
     /* discord black magic */
     grid-template-areas: "notice notice notice" "guildsList guildsList page" "channelsList channelsList page" !important;
-    
+    grid-template-rows: [top] 0 [titleBarEnd] min-content [noticeEnd] 1fr [end];
+
     > div[class^="content"] > div[class^="sidebar"] {
         --radius-md: 0; /* make border unrounded */
 
