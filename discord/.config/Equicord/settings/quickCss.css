@@ -5,87 +5,34 @@
 [aria-label="Send a gift"], /* send a gift button */
 
 /* sidebar */
-[class^="tutorialContainer_"]:not(:first-of-type), /* add server button */
-[class^="itemsContainer"] > [class^="stack"] > [class^="listItem"], /* discover button and divider between friends and servers */
-[class^="privateChannels"] > [class^="searchBar"], /* friends search bar in dms bar */
+[class*="itemsContainer"] > [class*="stack"] > [class*="listItem"], /* discover button and divider between friends and servers */
+[class*="privateChannels"] > [class*="searchBar"], /* friends search bar in dms bar */
+[class*="sidebarResizeHandle"], /* resize handle for sidebar */
 
 /* profiles */
-[class^="avatarDecoration"], /* chat box avatar decorations */
-[class^="profileEffects"], /* profile animations */
+[class*="avatarDecoration"], /* chat box avatar decorations */
+[class*="profileEffects"], /* profile animations */
 [aria-label="User Badges"], /* profile badges */
 [aria-label^="Custom status:"], /* profile status */
-[class^="mutuals"], /* mutual servers and friends */
+[class*="mutuals"], /* mutual servers and friends */
 [class*="clanTag"], /* clan tag */
-[class^="guildTagContainer"], /* clan tag in profile */
-div[class^="interactive"] > div[style^="background: linear-gradient"], /* nameplates */
-[aria-label="Pronouns"], /* pronouns */
-[class*="pronouns"] > [class^="dotSpacer"], /* pronouns spacer dot */
-[class^="nicknameIcons"], /* add note button */
+[class*="guildTagContainer"], /* clan tag in profile */
+[class*="interactive"] > [style^="background: linear-gradient"], /* nameplates */
+[class*="pronounsText"], /* pronouns */
+[class*="pronouns"] > [class*="dotSpacer"], /* pronouns spacer dot */
+[class*="nicknameIcons"], /* add note button */
 
 /* activities and apps */
-[aria-label="Start an Activity"], /* app launcher button in VC and status bar */
-[class^="channelAppLauncher"], /* chat box app launcher button */
-
-/* server bar */
-[aria-label="Channels"] > li > div[class^="containerDefault"], /* events button */
-[aria-label="Channels"] > [class^="sectionDivider"], /* events delimiter */
-[aria-label="Channels"] > div[style="height: 12px;"], /* events whitespace */
-[aria-label="Channels"] > div[aria-hidden="true"], /* events whitespace */
-div[class^="animatedContainer"], /* server banner if boosted */
-div[class*="hasBanner"] > div[class^="header"], /* server banner dropshadow */
-div[data-list-item-id^="channels___boosts"], /* server boosts bar */
-button[class^="refreshVoiceChannelsButton"], /* button to reveal hidden VCs */
-div[class^="headerContent"] > div[class^="guildIcon"], /* server boost number icon */
-div[class^="headerContent"] > div[class^="headerChildren"], /* server title chevron */
-div[class^="sidebarResizeHandle"], /* resize handle for sidebar */
-div[class^="unreadMentionsIndicator"], /* unread indicator when scrolling server */
+[aria-label="Apps"], /* app launcher button in VC and status bar */
+[class*="channelAppLauncher"], /* chat box app launcher button */
 
 /* chat */
-[class^="buttons"] > [class^="expression-picker-chat"]:nth-of-type(3), /* chat box sticker button */
+[class*="buttons"] > [class*="expression-picker-chat"]:nth-of-type(3), /* chat box sticker button */
 [id="sticker-picker-tab"], /* sticker button inside gif/emoji picker */
-[class^="threadSuggestionBar"] /* suggest starting thread */
+[class^="threadSuggestionBar"], /* suggest starting thread */
+[class*="-bar theme-dark theme-darker images-dark"] /* title bar remove helper */
 
 { display: none !important; }
 
-/* other fixes */
-foreignObject > div[class^="banner"] { background-image: none !important; } /* disable nitro banner */
-div[class^="sidebar"] { width: 16rem !important; } /* fixed sidebar width */
-div[class^="base"] > div[class^="bar"] { display: none; } /* remove title bar */
-div[class^="bar"] { min-height: 0; } /* remove title bar whitespace */
-
-/* server bar up top */
-div[class^="base"] {
-    /* discord black magic */
-    grid-template-areas: "notice notice notice" "guildsList guildsList page" "channelsList channelsList page" !important;
-    grid-template-rows: [top] 0 [titleBarEnd] min-content [noticeEnd] 1fr [end];
-
-    > div[class^="content"] > div[class^="sidebar"] {
-        --radius-md: 0; /* make border unrounded */
-
-        > nav {
-            margin: 0.4rem; /* margins */
-            margin-top: 0; /* remove top margin for top padding so notif pill looks better */
-            width: 100%; /* full size bar */
-            mask: none; /* remove gradient */
-
-            > ul > div[class^="itemsContainer"] > div[class^="stack"] {
-                padding: 0; /* remove extra padding */
-                padding-top: 0.4rem; /* add top padding for notif pill */
-                flex-direction: row; /* instead of column bar */
-                overflow: scroll hidden !important; /* scroll in case of multiple notifs */
-
-                /* unread dms */
-                div[id^="guild-list-unread-dms"] { width: fit-content; }
-
-                /* rotate and center pill */
-                div[class^="pill"] { transform: translateY(-55%) translateX(195%) rotate(90deg); }
-
-                /* padding for server icons */
-                div[class^="listItem"] { width: max-content; }
-
-                /* instead of column bar */
-                > div[class^="stack"] { flex-direction: row; }
-            }
-        }
-    }
-}
+div[class*="base"] { grid-template-rows: [top] 0.3rem [titleBarEnd] min-content [noticeEnd] 1fr [end]; } /* remove title bar */
+div[class*="sidebar"] { width: 16rem !important; } /* fixed sidebar width */
